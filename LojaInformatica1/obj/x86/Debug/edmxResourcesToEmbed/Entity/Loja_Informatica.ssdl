@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Loja_Informatica_1Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Loja_Informatica_1ModelStoreContainer">
+    <EntitySet Name="Cargo" EntityType="Loja_Informatica_1Model.Store.Cargo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cliente" EntityType="Loja_Informatica_1Model.Store.Cliente" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Endereco" EntityType="Loja_Informatica_1Model.Store.Endereco" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Equipamento" EntityType="Loja_Informatica_1Model.Store.Equipamento" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Estado" EntityType="Loja_Informatica_1Model.Store.Estado" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Funcionario" EntityType="Loja_Informatica_1Model.Store.Funcionario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Funcionario_OrdemServico" EntityType="Loja_Informatica_1Model.Store.Funcionario_OrdemServico" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrdemServico" EntityType="Loja_Informatica_1Model.Store.OrdemServico" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pessoa" EntityType="Loja_Informatica_1Model.Store.Pessoa" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PessoaFisica" EntityType="Loja_Informatica_1Model.Store.PessoaFisica" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PessoaJuridica" EntityType="Loja_Informatica_1Model.Store.PessoaJuridica" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicoInterno" EntityType="Loja_Informatica_1Model.Store.ServicoInterno" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicosExternos" EntityType="Loja_Informatica_1Model.Store.ServicosExternos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Telefone" EntityType="Loja_Informatica_1Model.Store.Telefone" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoEquipamento" EntityType="Loja_Informatica_1Model.Store.TipoEquipamento" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoParticipacao" EntityType="Loja_Informatica_1Model.Store.TipoParticipacao" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoTelefone" EntityType="Loja_Informatica_1Model.Store.TipoTelefone" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="Possui" Association="Loja_Informatica_1Model.Store.Possui">
+      <End Role="OrdemServico" EntitySet="OrdemServico" />
+      <End Role="Funcionario_OrdemServico" EntitySet="Funcionario_OrdemServico" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cargo">
+    <Key>
+      <PropertyRef Name="IdCargo" />
+    </Key>
+    <Property Name="IdCargo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="int" Nullable="false" />
+    <Property Name="DataCadastro" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Endereco">
+    <Key>
+      <PropertyRef Name="IdEndereco" />
+    </Key>
+    <Property Name="IdEndereco" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NomeEndereco" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="CEP" Type="varchar" MaxLength="10" />
+    <Property Name="Bairro" Type="varchar" MaxLength="150" />
+    <Property Name="Cidade" Type="varchar" MaxLength="150" />
+    <Property Name="IdPessoa" Type="int" Nullable="false" />
+    <Property Name="UF" Type="char" Nullable="false" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Equipamento">
+    <Key>
+      <PropertyRef Name="IdEquipamento" />
+    </Key>
+    <Property Name="IdEquipamento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Modelo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="NumeroSerie" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Fabricante" Type="varchar" MaxLength="100" />
+    <Property Name="DataEntrada" Type="date" Nullable="false" />
+    <Property Name="IdOrdemServico" Type="int" Nullable="false" />
+    <Property Name="IdTipoEquipamento" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="UF" />
+    </Key>
+    <Property Name="UF" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="NomeEstado" Type="varchar" Nullable="false" MaxLength="70" />
+  </EntityType>
+  <EntityType Name="Funcionario">
+    <Key>
+      <PropertyRef Name="IdFuncionario" />
+    </Key>
+    <Property Name="IdFuncionario" Type="int" Nullable="false" />
+    <Property Name="DataAdmissao" Type="date" Nullable="false" />
+    <Property Name="DataDemissao" Type="date" />
+    <Property Name="ValeRefeicao" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="ValeTransporte" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="IdCargo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Funcionario_OrdemServico">
+    <Key>
+      <PropertyRef Name="IdFuncionario" />
+      <PropertyRef Name="IdOrdemServico" />
+    </Key>
+    <Property Name="IdFuncionario" Type="int" Nullable="false" />
+    <Property Name="IdOrdemServico" Type="int" Nullable="false" />
+    <Property Name="IdTipoParticipacao" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdemServico">
+    <Key>
+      <PropertyRef Name="IdOrdemServico" />
+    </Key>
+    <Property Name="IdOrdemServico" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Observacao" Type="text" Nullable="false" />
+    <Property Name="Valor" Type="real" Nullable="false" />
+    <Property Name="DataPagamento" Type="date" />
+    <Property Name="IdCliente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pessoa">
+    <Key>
+      <PropertyRef Name="IdPessoa" />
+    </Key>
+    <Property Name="IdPessoa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="Email" Type="varchar" MaxLength="150" />
+    <Property Name="Observacao" Type="text" />
+    <Property Name="Login" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="senha" Type="varchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="PessoaFisica">
+    <Key>
+      <PropertyRef Name="IdPessoaFisica" />
+    </Key>
+    <Property Name="IdPessoaFisica" Type="int" Nullable="false" />
+    <Property Name="CPF" Type="varchar" Nullable="false" MaxLength="14" />
+    <Property Name="RG" Type="varchar" MaxLength="11" />
+    <Property Name="Sexo" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="PessoaJuridica">
+    <Key>
+      <PropertyRef Name="IdPessoaJuridica" />
+    </Key>
+    <Property Name="IdPessoaJuridica" Type="int" Nullable="false" />
+    <Property Name="CNPJ" Type="varchar" Nullable="false" MaxLength="18" />
+    <Property Name="RazaoSocial" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="InscricaoEstadual" Type="varchar" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="ServicoInterno">
+    <Key>
+      <PropertyRef Name="IdServicoInterno" />
+    </Key>
+    <Property Name="IdServicoInterno" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EntradaEquipamento" Type="date" Nullable="false" />
+    <Property Name="SaidaEquipamento" Type="date" />
+    <Property Name="Valor" Type="real" Nullable="false" />
+    <Property Name="Garantia" Type="text" />
+    <Property Name="ObservacaoTecnico" Type="text" Nullable="false" />
+    <Property Name="IdOrdemServico" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServicosExternos">
+    <Key>
+      <PropertyRef Name="IdServicoExterno" />
+    </Key>
+    <Property Name="IdServicoExterno" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DataVisita" Type="date" Nullable="false" />
+    <Property Name="TipoServico" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="Valor" Type="real" Nullable="false" />
+    <Property Name="Observacao" Type="text" Nullable="false" />
+    <Property Name="IdOrdemServico" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Telefone">
+    <Key>
+      <PropertyRef Name="IdTelefone" />
+    </Key>
+    <Property Name="IdTelefone" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Numero" Type="varchar" Nullable="false" MaxLength="14" />
+    <Property Name="IdPessoa" Type="int" Nullable="false" />
+    <Property Name="IdTipoTelefone" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoEquipamento">
+    <Key>
+      <PropertyRef Name="IdTipoEquipamento" />
+    </Key>
+    <Property Name="IdTipoEquipamento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TipoParticipacao">
+    <Key>
+      <PropertyRef Name="IdTipoParticipacao" />
+    </Key>
+    <Property Name="IdTipoParticipacao" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TipoTelefone">
+    <Key>
+      <PropertyRef Name="IdTipoTelefone" />
+    </Key>
+    <Property Name="IdTipoTelefone" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="Possui">
+    <End Role="OrdemServico" Type="Loja_Informatica_1Model.Store.OrdemServico" Multiplicity="1" />
+    <End Role="Funcionario_OrdemServico" Type="Loja_Informatica_1Model.Store.Funcionario_OrdemServico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdemServico">
+        <PropertyRef Name="IdOrdemServico" />
+      </Principal>
+      <Dependent Role="Funcionario_OrdemServico">
+        <PropertyRef Name="IdOrdemServico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LojaInformaticaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="LojaInformaticaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cargoes" EntityType="LojaInformaticaModel.Cargo" />
+    <EntitySet Name="Clientes" EntityType="LojaInformaticaModel.Cliente" />
+    <EntitySet Name="Enderecoes" EntityType="LojaInformaticaModel.Endereco" />
+    <EntitySet Name="Equipamentoes" EntityType="LojaInformaticaModel.Equipamento" />
+    <EntitySet Name="Estadoes" EntityType="LojaInformaticaModel.Estado" />
+    <EntitySet Name="Funcionarios" EntityType="LojaInformaticaModel.Funcionario" />
+    <EntitySet Name="Funcionario_OrdemServico" EntityType="LojaInformaticaModel.Funcionario_OrdemServico" />
+    <EntitySet Name="OrdemServicoes" EntityType="LojaInformaticaModel.OrdemServico" />
+    <EntitySet Name="Pessoas" EntityType="LojaInformaticaModel.Pessoa" />
+    <EntitySet Name="PessoaFisicas" EntityType="LojaInformaticaModel.PessoaFisica" />
+    <EntitySet Name="PessoaJuridicas" EntityType="LojaInformaticaModel.PessoaJuridica" />
+    <EntitySet Name="ServicoInternoes" EntityType="LojaInformaticaModel.ServicoInterno" />
+    <EntitySet Name="ServicosExternos" EntityType="LojaInformaticaModel.ServicosExterno" />
+    <EntitySet Name="Telefones" EntityType="LojaInformaticaModel.Telefone" />
+    <EntitySet Name="TipoEquipamentoes" EntityType="LojaInformaticaModel.TipoEquipamento" />
+    <EntitySet Name="TipoParticipacaos" EntityType="LojaInformaticaModel.TipoParticipacao" />
+    <EntitySet Name="TipoTelefones" EntityType="LojaInformaticaModel.TipoTelefone" />
+    <AssociationSet Name="FKFuncionari298568" Association="LojaInformaticaModel.FKFuncionari298568">
+      <End Role="Cargo" EntitySet="Cargoes" />
+      <End Role="Funcionario" EntitySet="Funcionarios" />
+    </AssociationSet>
+    <AssociationSet Name="FKCliente186779" Association="LojaInformaticaModel.FKCliente186779">
+      <End Role="Pessoa" EntitySet="Pessoas" />
+      <End Role="Cliente" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FKOrdemServi549840" Association="LojaInformaticaModel.FKOrdemServi549840">
+      <End Role="Cliente" EntitySet="Clientes" />
+      <End Role="OrdemServico" EntitySet="OrdemServicoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKEndereco120717" Association="LojaInformaticaModel.FKEndereco120717">
+      <End Role="Estado" EntitySet="Estadoes" />
+      <End Role="Endereco" EntitySet="Enderecoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKEndereco471629" Association="LojaInformaticaModel.FKEndereco471629">
+      <End Role="Pessoa" EntitySet="Pessoas" />
+      <End Role="Endereco" EntitySet="Enderecoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKEquipament237266" Association="LojaInformaticaModel.FKEquipament237266">
+      <End Role="TipoEquipamento" EntitySet="TipoEquipamentoes" />
+      <End Role="Equipamento" EntitySet="Equipamentoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKEquipament977259" Association="LojaInformaticaModel.FKEquipament977259">
+      <End Role="OrdemServico" EntitySet="OrdemServicoes" />
+      <End Role="Equipamento" EntitySet="Equipamentoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKFuncionari166755" Association="LojaInformaticaModel.FKFuncionari166755">
+      <End Role="Pessoa" EntitySet="Pessoas" />
+      <End Role="Funcionario" EntitySet="Funcionarios" />
+    </AssociationSet>
+    <AssociationSet Name="FKFuncionari997337" Association="LojaInformaticaModel.FKFuncionari997337">
+      <End Role="Funcionario" EntitySet="Funcionarios" />
+      <End Role="Funcionario_OrdemServico" EntitySet="Funcionario_OrdemServico" />
+    </AssociationSet>
+    <AssociationSet Name="FKFuncionari589104" Association="LojaInformaticaModel.FKFuncionari589104">
+      <End Role="TipoParticipacao" EntitySet="TipoParticipacaos" />
+      <End Role="Funcionario_OrdemServico" EntitySet="Funcionario_OrdemServico" />
+    </AssociationSet>
+    <AssociationSet Name="FKFuncionari681175" Association="LojaInformaticaModel.FKFuncionari681175">
+      <End Role="OrdemServico" EntitySet="OrdemServicoes" />
+      <End Role="Funcionario_OrdemServico" EntitySet="Funcionario_OrdemServico" />
+    </AssociationSet>
+    <AssociationSet Name="FKServicoInt140135" Association="LojaInformaticaModel.FKServicoInt140135">
+      <End Role="OrdemServico" EntitySet="OrdemServicoes" />
+      <End Role="ServicoInterno" EntitySet="ServicoInternoes" />
+    </AssociationSet>
+    <AssociationSet Name="FKServicosEx469312" Association="LojaInformaticaModel.FKServicosEx469312">
+      <End Role="OrdemServico" EntitySet="OrdemServicoes" />
+      <End Role="ServicosExternos" EntitySet="ServicosExternos" />
+    </AssociationSet>
+    <AssociationSet Name="FKPessoaFisi201024" Association="LojaInformaticaModel.FKPessoaFisi201024">
+      <End Role="Pessoa" EntitySet="Pessoas" />
+      <End Role="PessoaFisica" EntitySet="PessoaFisicas" />
+    </AssociationSet>
+    <AssociationSet Name="FKPessoaJuri758441" Association="LojaInformaticaModel.FKPessoaJuri758441">
+      <End Role="Pessoa" EntitySet="Pessoas" />
+      <End Role="PessoaJuridica" EntitySet="PessoaJuridicas" />
+    </AssociationSet>
+    <AssociationSet Name="FKTelefone32057" Association="LojaInformaticaModel.FKTelefone32057">
+      <End Role="Pessoa" EntitySet="Pessoas" />
+      <End Role="Telefone" EntitySet="Telefones" />
+    </AssociationSet>
+    <AssociationSet Name="FKTelefone506430" Association="LojaInformaticaModel.FKTelefone506430">
+      <End Role="TipoTelefone" EntitySet="TipoTelefones" />
+      <End Role="Telefone" EntitySet="Telefones" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cargo">
+    <Key>
+      <PropertyRef Name="IdCargo" />
+    </Key>
+    <Property Name="IdCargo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Funcionarios" Relationship="LojaInformaticaModel.FKFuncionari298568" FromRole="Cargo" ToRole="Funcionario" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="Int32" Nullable="false" />
+    <Property Name="DataCadastro" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Pessoa" Relationship="LojaInformaticaModel.FKCliente186779" FromRole="Cliente" ToRole="Pessoa" />
+    <NavigationProperty Name="OrdemServicoes" Relationship="LojaInformaticaModel.FKOrdemServi549840" FromRole="Cliente" ToRole="OrdemServico" />
+  </EntityType>
+  <EntityType Name="Endereco">
+    <Key>
+      <PropertyRef Name="IdEndereco" />
+    </Key>
+    <Property Name="IdEndereco" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomeEndereco" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="CEP" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Bairro" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Cidade" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="IdPessoa" Type="Int32" Nullable="false" />
+    <Property Name="UF" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="Estado" Relationship="LojaInformaticaModel.FKEndereco120717" FromRole="Endereco" ToRole="Estado" />
+    <NavigationProperty Name="Pessoa" Relationship="LojaInformaticaModel.FKEndereco471629" FromRole="Endereco" ToRole="Pessoa" />
+  </EntityType>
+  <EntityType Name="Equipamento">
+    <Key>
+      <PropertyRef Name="IdEquipamento" />
+    </Key>
+    <Property Name="IdEquipamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Modelo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="NumeroSerie" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Fabricante" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DataEntrada" Type="DateTime" Nullable="false" />
+    <Property Name="IdOrdemServico" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoEquipamento" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TipoEquipamento" Relationship="LojaInformaticaModel.FKEquipament237266" FromRole="Equipamento" ToRole="TipoEquipamento" />
+    <NavigationProperty Name="OrdemServico" Relationship="LojaInformaticaModel.FKEquipament977259" FromRole="Equipamento" ToRole="OrdemServico" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="UF" />
+    </Key>
+    <Property Name="UF" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="NomeEstado" Type="String" Nullable="false" MaxLength="70" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Enderecoes" Relationship="LojaInformaticaModel.FKEndereco120717" FromRole="Estado" ToRole="Endereco" />
+  </EntityType>
+  <EntityType Name="Funcionario">
+    <Key>
+      <PropertyRef Name="IdFuncionario" />
+    </Key>
+    <Property Name="IdFuncionario" Type="Int32" Nullable="false" />
+    <Property Name="DataAdmissao" Type="DateTime" Nullable="false" />
+    <Property Name="DataDemissao" Type="DateTime" />
+    <Property Name="ValeRefeicao" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="ValeTransporte" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="IdCargo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cargo" Relationship="LojaInformaticaModel.FKFuncionari298568" FromRole="Funcionario" ToRole="Cargo" />
+    <NavigationProperty Name="Pessoa" Relationship="LojaInformaticaModel.FKFuncionari166755" FromRole="Funcionario" ToRole="Pessoa" />
+    <NavigationProperty Name="Funcionario_OrdemServico" Relationship="LojaInformaticaModel.FKFuncionari997337" FromRole="Funcionario" ToRole="Funcionario_OrdemServico" />
+  </EntityType>
+  <EntityType Name="Funcionario_OrdemServico">
+    <Key>
+      <PropertyRef Name="IdFuncionario" />
+      <PropertyRef Name="IdOrdemServico" />
+    </Key>
+    <Property Name="IdFuncionario" Type="Int32" Nullable="false" />
+    <Property Name="IdOrdemServico" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoParticipacao" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Funcionario" Relationship="LojaInformaticaModel.FKFuncionari997337" FromRole="Funcionario_OrdemServico" ToRole="Funcionario" />
+    <NavigationProperty Name="TipoParticipacao" Relationship="LojaInformaticaModel.FKFuncionari589104" FromRole="Funcionario_OrdemServico" ToRole="TipoParticipacao" />
+    <NavigationProperty Name="OrdemServico" Relationship="LojaInformaticaModel.FKFuncionari681175" FromRole="Funcionario_OrdemServico" ToRole="OrdemServico" />
+  </EntityType>
+  <EntityType Name="OrdemServico">
+    <Key>
+      <PropertyRef Name="IdOrdemServico" />
+    </Key>
+    <Property Name="IdOrdemServico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Observacao" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Valor" Type="Single" Nullable="false" />
+    <Property Name="DataPagamento" Type="DateTime" />
+    <Property Name="IdCliente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cliente" Relationship="LojaInformaticaModel.FKOrdemServi549840" FromRole="OrdemServico" ToRole="Cliente" />
+    <NavigationProperty Name="Equipamentoes" Relationship="LojaInformaticaModel.FKEquipament977259" FromRole="OrdemServico" ToRole="Equipamento" />
+    <NavigationProperty Name="Funcionario_OrdemServico" Relationship="LojaInformaticaModel.FKFuncionari681175" FromRole="OrdemServico" ToRole="Funcionario_OrdemServico" />
+    <NavigationProperty Name="ServicoInternoes" Relationship="LojaInformaticaModel.FKServicoInt140135" FromRole="OrdemServico" ToRole="ServicoInterno" />
+    <NavigationProperty Name="ServicosExternos" Relationship="LojaInformaticaModel.FKServicosEx469312" FromRole="OrdemServico" ToRole="ServicosExternos" />
+  </EntityType>
+  <EntityType Name="Pessoa">
+    <Key>
+      <PropertyRef Name="IdPessoa" />
+    </Key>
+    <Property Name="IdPessoa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Observacao" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="senha" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Cliente" Relationship="LojaInformaticaModel.FKCliente186779" FromRole="Pessoa" ToRole="Cliente" />
+    <NavigationProperty Name="Enderecoes" Relationship="LojaInformaticaModel.FKEndereco471629" FromRole="Pessoa" ToRole="Endereco" />
+    <NavigationProperty Name="Funcionario" Relationship="LojaInformaticaModel.FKFuncionari166755" FromRole="Pessoa" ToRole="Funcionario" />
+    <NavigationProperty Name="PessoaFisica" Relationship="LojaInformaticaModel.FKPessoaFisi201024" FromRole="Pessoa" ToRole="PessoaFisica" />
+    <NavigationProperty Name="PessoaJuridica" Relationship="LojaInformaticaModel.FKPessoaJuri758441" FromRole="Pessoa" ToRole="PessoaJuridica" />
+    <NavigationProperty Name="Telefones" Relationship="LojaInformaticaModel.FKTelefone32057" FromRole="Pessoa" ToRole="Telefone" />
+  </EntityType>
+  <EntityType Name="PessoaFisica">
+    <Key>
+      <PropertyRef Name="IdPessoaFisica" />
+    </Key>
+    <Property Name="IdPessoaFisica" Type="Int32" Nullable="false" />
+    <Property Name="CPF" Type="String" Nullable="false" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="RG" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="Sexo" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="Pessoa" Relationship="LojaInformaticaModel.FKPessoaFisi201024" FromRole="PessoaFisica" ToRole="Pessoa" />
+  </EntityType>
+  <EntityType Name="PessoaJuridica">
+    <Key>
+      <PropertyRef Name="IdPessoaJuridica" />
+    </Key>
+    <Property Name="IdPessoaJuridica" Type="Int32" Nullable="false" />
+    <Property Name="CNPJ" Type="String" Nullable="false" MaxLength="18" Unicode="false" FixedLength="false" />
+    <Property Name="RazaoSocial" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="InscricaoEstadual" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Pessoa" Relationship="LojaInformaticaModel.FKPessoaJuri758441" FromRole="PessoaJuridica" ToRole="Pessoa" />
+  </EntityType>
+  <EntityType Name="ServicoInterno">
+    <Key>
+      <PropertyRef Name="IdServicoInterno" />
+    </Key>
+    <Property Name="IdServicoInterno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EntradaEquipamento" Type="DateTime" Nullable="false" />
+    <Property Name="SaidaEquipamento" Type="DateTime" />
+    <Property Name="Valor" Type="Single" Nullable="false" />
+    <Property Name="Garantia" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="ObservacaoTecnico" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="IdOrdemServico" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="OrdemServico" Relationship="LojaInformaticaModel.FKServicoInt140135" FromRole="ServicoInterno" ToRole="OrdemServico" />
+  </EntityType>
+  <EntityType Name="ServicosExterno">
+    <Key>
+      <PropertyRef Name="IdServicoExterno" />
+    </Key>
+    <Property Name="IdServicoExterno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataVisita" Type="DateTime" Nullable="false" />
+    <Property Name="TipoServico" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Valor" Type="Single" Nullable="false" />
+    <Property Name="Observacao" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="IdOrdemServico" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="OrdemServico" Relationship="LojaInformaticaModel.FKServicosEx469312" FromRole="ServicosExternos" ToRole="OrdemServico" />
+  </EntityType>
+  <EntityType Name="Telefone">
+    <Key>
+      <PropertyRef Name="IdTelefone" />
+    </Key>
+    <Property Name="IdTelefone" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Numero" Type="String" Nullable="false" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="IdPessoa" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoTelefone" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Pessoa" Relationship="LojaInformaticaModel.FKTelefone32057" FromRole="Telefone" ToRole="Pessoa" />
+    <NavigationProperty Name="TipoTelefone" Relationship="LojaInformaticaModel.FKTelefone506430" FromRole="Telefone" ToRole="TipoTelefone" />
+  </EntityType>
+  <EntityType Name="TipoEquipamento">
+    <Key>
+      <PropertyRef Name="IdTipoEquipamento" />
+    </Key>
+    <Property Name="IdTipoEquipamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Equipamentoes" Relationship="LojaInformaticaModel.FKEquipament237266" FromRole="TipoEquipamento" ToRole="Equipamento" />
+  </EntityType>
+  <EntityType Name="TipoParticipacao">
+    <Key>
+      <PropertyRef Name="IdTipoParticipacao" />
+    </Key>
+    <Property Name="IdTipoParticipacao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Funcionario_OrdemServico" Relationship="LojaInformaticaModel.FKFuncionari589104" FromRole="TipoParticipacao" ToRole="Funcionario_OrdemServico" />
+  </EntityType>
+  <EntityType Name="TipoTelefone">
+    <Key>
+      <PropertyRef Name="IdTipoTelefone" />
+    </Key>
+    <Property Name="IdTipoTelefone" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Telefones" Relationship="LojaInformaticaModel.FKTelefone506430" FromRole="TipoTelefone" ToRole="Telefone" />
+  </EntityType>
+  <Association Name="FKFuncionari298568">
+    <End Role="Cargo" Type="LojaInformaticaModel.Cargo" Multiplicity="1" />
+    <End Role="Funcionario" Type="LojaInformaticaModel.Funcionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo">
+        <PropertyRef Name="IdCargo" />
+      </Principal>
+      <Dependent Role="Funcionario">
+        <PropertyRef Name="IdCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKCliente186779">
+    <End Role="Pessoa" Type="LojaInformaticaModel.Pessoa" Multiplicity="1" />
+    <End Role="Cliente" Type="LojaInformaticaModel.Cliente" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKOrdemServi549840">
+    <End Role="Cliente" Type="LojaInformaticaModel.Cliente" Multiplicity="1" />
+    <End Role="OrdemServico" Type="LojaInformaticaModel.OrdemServico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="OrdemServico">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEndereco120717">
+    <End Role="Estado" Type="LojaInformaticaModel.Estado" Multiplicity="1" />
+    <End Role="Endereco" Type="LojaInformaticaModel.Endereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="UF" />
+      </Principal>
+      <Dependent Role="Endereco">
+        <PropertyRef Name="UF" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEndereco471629">
+    <End Role="Pessoa" Type="LojaInformaticaModel.Pessoa" Multiplicity="1" />
+    <End Role="Endereco" Type="LojaInformaticaModel.Endereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Endereco">
+        <PropertyRef Name="IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEquipament237266">
+    <End Role="TipoEquipamento" Type="LojaInformaticaModel.TipoEquipamento" Multiplicity="1" />
+    <End Role="Equipamento" Type="LojaInformaticaModel.Equipamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoEquipamento">
+        <PropertyRef Name="IdTipoEquipamento" />
+      </Principal>
+      <Dependent Role="Equipamento">
+        <PropertyRef Name="IdTipoEquipamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKEquipament977259">
+    <End Role="OrdemServico" Type="LojaInformaticaModel.OrdemServico" Multiplicity="1" />
+    <End Role="Equipamento" Type="LojaInformaticaModel.Equipamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdemServico">
+        <PropertyRef Name="IdOrdemServico" />
+      </Principal>
+      <Dependent Role="Equipamento">
+        <PropertyRef Name="IdOrdemServico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKFuncionari166755">
+    <End Role="Pessoa" Type="LojaInformaticaModel.Pessoa" Multiplicity="1" />
+    <End Role="Funcionario" Type="LojaInformaticaModel.Funcionario" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Funcionario">
+        <PropertyRef Name="IdFuncionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKFuncionari997337">
+    <End Role="Funcionario" Type="LojaInformaticaModel.Funcionario" Multiplicity="1" />
+    <End Role="Funcionario_OrdemServico" Type="LojaInformaticaModel.Funcionario_OrdemServico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Funcionario">
+        <PropertyRef Name="IdFuncionario" />
+      </Principal>
+      <Dependent Role="Funcionario_OrdemServico">
+        <PropertyRef Name="IdFuncionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKFuncionari589104">
+    <End Role="TipoParticipacao" Type="LojaInformaticaModel.TipoParticipacao" Multiplicity="1" />
+    <End Role="Funcionario_OrdemServico" Type="LojaInformaticaModel.Funcionario_OrdemServico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoParticipacao">
+        <PropertyRef Name="IdTipoParticipacao" />
+      </Principal>
+      <Dependent Role="Funcionario_OrdemServico">
+        <PropertyRef Name="IdTipoParticipacao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKFuncionari681175">
+    <End Role="OrdemServico" Type="LojaInformaticaModel.OrdemServico" Multiplicity="1" />
+    <End Role="Funcionario_OrdemServico" Type="LojaInformaticaModel.Funcionario_OrdemServico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdemServico">
+        <PropertyRef Name="IdOrdemServico" />
+      </Principal>
+      <Dependent Role="Funcionario_OrdemServico">
+        <PropertyRef Name="IdOrdemServico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKServicoInt140135">
+    <End Role="OrdemServico" Type="LojaInformaticaModel.OrdemServico" Multiplicity="1" />
+    <End Role="ServicoInterno" Type="LojaInformaticaModel.ServicoInterno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdemServico">
+        <PropertyRef Name="IdOrdemServico" />
+      </Principal>
+      <Dependent Role="ServicoInterno">
+        <PropertyRef Name="IdOrdemServico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKServicosEx469312">
+    <End Role="OrdemServico" Type="LojaInformaticaModel.OrdemServico" Multiplicity="1" />
+    <End Role="ServicosExternos" Type="LojaInformaticaModel.ServicosExterno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdemServico">
+        <PropertyRef Name="IdOrdemServico" />
+      </Principal>
+      <Dependent Role="ServicosExternos">
+        <PropertyRef Name="IdOrdemServico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKPessoaFisi201024">
+    <End Role="Pessoa" Type="LojaInformaticaModel.Pessoa" Multiplicity="1" />
+    <End Role="PessoaFisica" Type="LojaInformaticaModel.PessoaFisica" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="PessoaFisica">
+        <PropertyRef Name="IdPessoaFisica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKPessoaJuri758441">
+    <End Role="Pessoa" Type="LojaInformaticaModel.Pessoa" Multiplicity="1" />
+    <End Role="PessoaJuridica" Type="LojaInformaticaModel.PessoaJuridica" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="PessoaJuridica">
+        <PropertyRef Name="IdPessoaJuridica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTelefone32057">
+    <End Role="Pessoa" Type="LojaInformaticaModel.Pessoa" Multiplicity="1" />
+    <End Role="Telefone" Type="LojaInformaticaModel.Telefone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="IdPessoa" />
+      </Principal>
+      <Dependent Role="Telefone">
+        <PropertyRef Name="IdPessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKTelefone506430">
+    <End Role="TipoTelefone" Type="LojaInformaticaModel.TipoTelefone" Multiplicity="1" />
+    <End Role="Telefone" Type="LojaInformaticaModel.Telefone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoTelefone">
+        <PropertyRef Name="IdTipoTelefone" />
+      </Principal>
+      <Dependent Role="Telefone">
+        <PropertyRef Name="IdTipoTelefone" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

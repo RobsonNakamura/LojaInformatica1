@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Loja_Informatica_1Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Loja_Informatica_1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cargo" EntityType="Loja_Informatica_1Model.Cargo" />
+    <EntitySet Name="Cliente" EntityType="Loja_Informatica_1Model.Cliente" />
+    <EntitySet Name="Endereco" EntityType="Loja_Informatica_1Model.Endereco" />
+    <EntitySet Name="Equipamento" EntityType="Loja_Informatica_1Model.Equipamento" />
+    <EntitySet Name="Estado" EntityType="Loja_Informatica_1Model.Estado" />
+    <EntitySet Name="Funcionario" EntityType="Loja_Informatica_1Model.Funcionario" />
+    <EntitySet Name="Funcionario_OrdemServico" EntityType="Loja_Informatica_1Model.Funcionario_OrdemServico" />
+    <EntitySet Name="OrdemServico" EntityType="Loja_Informatica_1Model.OrdemServico" />
+    <EntitySet Name="Pessoa" EntityType="Loja_Informatica_1Model.Pessoa" />
+    <EntitySet Name="PessoaFisica" EntityType="Loja_Informatica_1Model.PessoaFisica" />
+    <EntitySet Name="PessoaJuridica" EntityType="Loja_Informatica_1Model.PessoaJuridica" />
+    <EntitySet Name="ServicoInterno" EntityType="Loja_Informatica_1Model.ServicoInterno" />
+    <EntitySet Name="ServicosExternos" EntityType="Loja_Informatica_1Model.ServicosExternos" />
+    <EntitySet Name="Telefone" EntityType="Loja_Informatica_1Model.Telefone" />
+    <EntitySet Name="TipoEquipamento" EntityType="Loja_Informatica_1Model.TipoEquipamento" />
+    <EntitySet Name="TipoParticipacao" EntityType="Loja_Informatica_1Model.TipoParticipacao" />
+    <EntitySet Name="TipoTelefone" EntityType="Loja_Informatica_1Model.TipoTelefone" />
+    <AssociationSet Name="Possui" Association="Loja_Informatica_1Model.Possui">
+      <End Role="OrdemServico" EntitySet="OrdemServico" />
+      <End Role="Funcionario_OrdemServico" EntitySet="Funcionario_OrdemServico" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cargo">
+    <Key>
+      <PropertyRef Name="IdCargo" />
+    </Key>
+    <Property Name="IdCargo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="Int32" Nullable="false" />
+    <Property Name="DataCadastro" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Endereco">
+    <Key>
+      <PropertyRef Name="IdEndereco" />
+    </Key>
+    <Property Name="IdEndereco" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomeEndereco" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="CEP" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Bairro" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Cidade" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="IdPessoa" Type="Int32" Nullable="false" />
+    <Property Name="UF" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="Equipamento">
+    <Key>
+      <PropertyRef Name="IdEquipamento" />
+    </Key>
+    <Property Name="IdEquipamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Modelo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="NumeroSerie" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Fabricante" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DataEntrada" Type="DateTime" Nullable="false" />
+    <Property Name="IdOrdemServico" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoEquipamento" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="UF" />
+    </Key>
+    <Property Name="UF" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="NomeEstado" Type="String" Nullable="false" MaxLength="70" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Funcionario">
+    <Key>
+      <PropertyRef Name="IdFuncionario" />
+    </Key>
+    <Property Name="IdFuncionario" Type="Int32" Nullable="false" />
+    <Property Name="DataAdmissao" Type="DateTime" Nullable="false" />
+    <Property Name="DataDemissao" Type="DateTime" />
+    <Property Name="ValeRefeicao" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="ValeTransporte" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="IdCargo" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Funcionario_OrdemServico">
+    <Key>
+      <PropertyRef Name="IdFuncionario" />
+      <PropertyRef Name="IdOrdemServico" />
+    </Key>
+    <Property Name="IdFuncionario" Type="Int32" Nullable="false" />
+    <Property Name="IdOrdemServico" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoParticipacao" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="OrdemServico" Relationship="Loja_Informatica_1Model.Possui" FromRole="Funcionario_OrdemServico" ToRole="OrdemServico" />
+  </EntityType>
+  <EntityType Name="OrdemServico">
+    <Key>
+      <PropertyRef Name="IdOrdemServico" />
+    </Key>
+    <Property Name="IdOrdemServico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Observacao" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Valor" Type="Single" Nullable="false" />
+    <Property Name="DataPagamento" Type="DateTime" />
+    <Property Name="IdCliente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Funcionario_OrdemServico" Relationship="Loja_Informatica_1Model.Possui" FromRole="OrdemServico" ToRole="Funcionario_OrdemServico" />
+  </EntityType>
+  <EntityType Name="Pessoa">
+    <Key>
+      <PropertyRef Name="IdPessoa" />
+    </Key>
+    <Property Name="IdPessoa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Observacao" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="senha" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="PessoaFisica">
+    <Key>
+      <PropertyRef Name="IdPessoaFisica" />
+    </Key>
+    <Property Name="IdPessoaFisica" Type="Int32" Nullable="false" />
+    <Property Name="CPF" Type="String" Nullable="false" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="RG" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="Sexo" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="PessoaJuridica">
+    <Key>
+      <PropertyRef Name="IdPessoaJuridica" />
+    </Key>
+    <Property Name="IdPessoaJuridica" Type="Int32" Nullable="false" />
+    <Property Name="CNPJ" Type="String" Nullable="false" MaxLength="18" Unicode="false" FixedLength="false" />
+    <Property Name="RazaoSocial" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="InscricaoEstadual" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ServicoInterno">
+    <Key>
+      <PropertyRef Name="IdServicoInterno" />
+    </Key>
+    <Property Name="IdServicoInterno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EntradaEquipamento" Type="DateTime" Nullable="false" />
+    <Property Name="SaidaEquipamento" Type="DateTime" />
+    <Property Name="Valor" Type="Single" Nullable="false" />
+    <Property Name="Garantia" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="ObservacaoTecnico" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="IdOrdemServico" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServicosExternos">
+    <Key>
+      <PropertyRef Name="IdServicoExterno" />
+    </Key>
+    <Property Name="IdServicoExterno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataVisita" Type="DateTime" Nullable="false" />
+    <Property Name="TipoServico" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Valor" Type="Single" Nullable="false" />
+    <Property Name="Observacao" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="IdOrdemServico" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Telefone">
+    <Key>
+      <PropertyRef Name="IdTelefone" />
+    </Key>
+    <Property Name="IdTelefone" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Numero" Type="String" Nullable="false" MaxLength="14" Unicode="false" FixedLength="false" />
+    <Property Name="IdPessoa" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoTelefone" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoEquipamento">
+    <Key>
+      <PropertyRef Name="IdTipoEquipamento" />
+    </Key>
+    <Property Name="IdTipoEquipamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TipoParticipacao">
+    <Key>
+      <PropertyRef Name="IdTipoParticipacao" />
+    </Key>
+    <Property Name="IdTipoParticipacao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TipoTelefone">
+    <Key>
+      <PropertyRef Name="IdTipoTelefone" />
+    </Key>
+    <Property Name="IdTipoTelefone" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <Association Name="Possui">
+    <End Role="OrdemServico" Type="Loja_Informatica_1Model.OrdemServico" Multiplicity="1" />
+    <End Role="Funcionario_OrdemServico" Type="Loja_Informatica_1Model.Funcionario_OrdemServico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdemServico">
+        <PropertyRef Name="IdOrdemServico" />
+      </Principal>
+      <Dependent Role="Funcionario_OrdemServico">
+        <PropertyRef Name="IdOrdemServico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

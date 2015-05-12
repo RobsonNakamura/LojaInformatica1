@@ -1,0 +1,16 @@
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\bin\Debug\LojaInformatica1.exe
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\bin\Debug\LojaInformatica1.pdb
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.Cadastros.FormCadastroClientes.resources
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.Cadastros.FormPF.resources
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.Cadastros.FormPJ.resources
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.Form1.resources
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.Properties.Resources.resources
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.TelaInicial.FormTelaInicial.resources
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.TelaPrincipal.FormTelaLogin.resources
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.csproj.GenerateResource.Cache
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.exe
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.pdb
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\bin\Debug\LojaInformatica1.exe.config
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.Cadastros.FormFuncionario.resources
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.EditarCadastro.FormEditarCliente.resources
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.csprojResolveAssemblyReference.cache
