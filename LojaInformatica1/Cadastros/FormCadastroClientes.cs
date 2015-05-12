@@ -14,15 +14,12 @@ namespace LojaInformatica1.Cadastros
     public partial class FormCadastroClientes : Form
     {
 
-        private LojaInformatica1Entities db;
-        private PessoaData pessoaData;
-        private Pessoa pessoa;
+       
 
         public FormCadastroClientes()
         {
             InitializeComponent();
-            db = new LojaInformaticaEntities();
-            pessoaData = new PessoaData(db);
+       
         }
 
         private void rdbPJ_CheckedChanged(object sender, EventArgs e)
