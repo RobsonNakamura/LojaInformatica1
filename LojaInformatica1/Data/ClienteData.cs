@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data.Objects;
 using LojaInformatica1.Model;
 
 namespace LojaInformatica1.Data
@@ -10,7 +11,7 @@ namespace LojaInformatica1.Data
     {
 
         private LojaInformaticaEntities db;
-        private ObjectSet <Cliente> clientes;
+        private ObjectSet<Cliente> clientes;
 
         public ClienteData(LojaInformaticaEntities _db)
         {
@@ -18,6 +19,10 @@ namespace LojaInformatica1.Data
             clientes = db.CreateObjectSet<Cliente>();
         }
 
+        public List<Cliente> todosClientes()
+        {
+            return clientes.ToList();
+        }
 
     }
 }
