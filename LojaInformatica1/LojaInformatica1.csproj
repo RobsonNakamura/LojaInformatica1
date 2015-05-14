@@ -73,6 +73,23 @@
     <Compile Include="Cadastros\FormPJ.Designer.cs">
       <DependentUpon>FormPJ.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\CargoData.cs" />
+    <Compile Include="Data\ClienteData.cs" />
+    <Compile Include="Data\EnderecoData.cs" />
+    <Compile Include="Data\EquipamentoData.cs" />
+    <Compile Include="Data\EstadoData.cs" />
+    <Compile Include="Data\FuncionarioData.cs" />
+    <Compile Include="Data\Funcionario_OrdemServicoData.cs" />
+    <Compile Include="Data\OrdemServicoData.cs" />
+    <Compile Include="Data\PessoaData.cs" />
+    <Compile Include="Data\PessoaFisicaData.cs" />
+    <Compile Include="Data\PessoaJuridicaData.cs" />
+    <Compile Include="Data\ServicoExternoData.cs" />
+    <Compile Include="Data\ServicoInternoData.cs" />
+    <Compile Include="Data\TelefoneData.cs" />
+    <Compile Include="Data\TipoEquipamentoData.cs" />
+    <Compile Include="Data\TipoParticipacaoData.cs" />
+    <Compile Include="Data\TipoTelefoneData.cs" />
     <Compile Include="EditarCadastro\FormEditarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,9 +169,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

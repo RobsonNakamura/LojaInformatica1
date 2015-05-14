@@ -388,6 +388,7 @@
             this.Controls.Add(this.lblNomePJ);
             this.Controls.Add(this.txtCadastroPessoaJuridica);
             this.Name = "FormPJ";
+            this.ShowInTaskbar = false;
             this.Text = "FormPJ";
             this.ResumeLayout(false);
             this.PerformLayout();

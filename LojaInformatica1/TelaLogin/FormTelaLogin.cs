@@ -29,8 +29,8 @@ namespace LojaInformatica1.TelaPrincipal
                 new FormTelaInicial().Show();
             }
             else 
-            { 
-                MessageBox.Show("Login e Senha incorretos!", "Erro ao Logar!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {
+                MessageBox.Show("Login e Senha incorretos! Tente novamente", "Erro ao Logar!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -38,7 +38,6 @@ namespace LojaInformatica1.TelaPrincipal
         {
             Application.Exit();
         }
-
         
     }
 }

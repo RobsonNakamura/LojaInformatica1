@@ -33,6 +33,7 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarCadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarOrdemDeServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.internoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.externoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,9 +44,8 @@
             this.dadosEquipamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grbTipoPessoa = new System.Windows.Forms.GroupBox();
-            this.rdbPF = new System.Windows.Forms.RadioButton();
             this.rdbPJ = new System.Windows.Forms.RadioButton();
-            this.editarCadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rdbPF = new System.Windows.Forms.RadioButton();
             this.menuStrip1.SuspendLayout();
             this.grbTipoPessoa.SuspendLayout();
             this.SuspendLayout();
@@ -78,20 +78,26 @@
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // funcionáriosToolStripMenuItem
             // 
             this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.funcionáriosToolStripMenuItem.Text = "Funcionários";
             // 
             // equipamentosToolStripMenuItem
             // 
             this.equipamentosToolStripMenuItem.Name = "equipamentosToolStripMenuItem";
-            this.equipamentosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.equipamentosToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.equipamentosToolStripMenuItem.Text = "Equipamentos";
+            // 
+            // editarCadastrosToolStripMenuItem
+            // 
+            this.editarCadastrosToolStripMenuItem.Name = "editarCadastrosToolStripMenuItem";
+            this.editarCadastrosToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.editarCadastrosToolStripMenuItem.Text = "Editar Cadastros";
             // 
             // gerarOrdemDeServiçoToolStripMenuItem
             // 
@@ -164,19 +170,7 @@
             this.grbTipoPessoa.TabIndex = 2;
             this.grbTipoPessoa.TabStop = false;
             this.grbTipoPessoa.Text = "Escolha o tipo de pessoa";
-            // 
-            // rdbPF
-            // 
-            this.rdbPF.AutoSize = true;
-            this.rdbPF.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbPF.Location = new System.Drawing.Point(31, 34);
-            this.rdbPF.Name = "rdbPF";
-            this.rdbPF.Size = new System.Drawing.Size(113, 17);
-            this.rdbPF.TabIndex = 0;
-            this.rdbPF.TabStop = true;
-            this.rdbPF.Text = "Pessoa Física";
-            this.rdbPF.UseVisualStyleBackColor = true;
-            this.rdbPF.CheckedChanged += new System.EventHandler(this.rdbPF_CheckedChanged);
+            this.grbTipoPessoa.Enter += new System.EventHandler(this.grbTipoPessoa_Enter);
             // 
             // rdbPJ
             // 
@@ -191,11 +185,18 @@
             this.rdbPJ.UseVisualStyleBackColor = true;
             this.rdbPJ.CheckedChanged += new System.EventHandler(this.rdbPJ_CheckedChanged);
             // 
-            // editarCadastrosToolStripMenuItem
+            // rdbPF
             // 
-            this.editarCadastrosToolStripMenuItem.Name = "editarCadastrosToolStripMenuItem";
-            this.editarCadastrosToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.editarCadastrosToolStripMenuItem.Text = "Editar Cadastros";
+            this.rdbPF.AutoSize = true;
+            this.rdbPF.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbPF.Location = new System.Drawing.Point(31, 34);
+            this.rdbPF.Name = "rdbPF";
+            this.rdbPF.Size = new System.Drawing.Size(113, 17);
+            this.rdbPF.TabIndex = 0;
+            this.rdbPF.TabStop = true;
+            this.rdbPF.Text = "Pessoa Física";
+            this.rdbPF.UseVisualStyleBackColor = true;
+            this.rdbPF.CheckedChanged += new System.EventHandler(this.rdbPF_CheckedChanged);
             // 
             // FormCadastroClientes
             // 

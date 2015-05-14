@@ -17,9 +17,34 @@ namespace LojaInformatica1.TelaInicial
             InitializeComponent();
         }
 
+        //Função para abrir uma janela dentro da mesma janela
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new FormCadastroClientes().Show();
+            if (Application.OpenForms["FormCadastroClientes"] == null)
+            {
+                FormCadastroClientes cadastroClientes = new FormCadastroClientes();
+                cadastroClientes.MdiParent = this;
+                cadastroClientes.Show();
+                cadastroClientes.WindowState = FormWindowState.Minimized;
+                cadastroClientes.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+        //Função para abrir uma janela dentro da mesma janela
+        private void funcionariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["FormFuncionario"] == null)
+            {
+                FormFuncionario funcionarios = new FormFuncionario();
+                funcionarios.MdiParent = this;
+                funcionarios.Show();
+                funcionarios.WindowState = FormWindowState.Minimized;
+                funcionarios.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+
+        
         }
     }
 }

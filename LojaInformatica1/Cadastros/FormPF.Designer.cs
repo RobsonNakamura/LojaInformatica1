@@ -387,6 +387,7 @@
             this.Controls.Add(this.lblNomePF);
             this.Controls.Add(this.txtCadastroPessoaFisica);
             this.Name = "FormPF";
+            this.ShowInTaskbar = false;
             this.Text = "Cadastro de Pessoa Física";
             this.ResumeLayout(false);
             this.PerformLayout();
