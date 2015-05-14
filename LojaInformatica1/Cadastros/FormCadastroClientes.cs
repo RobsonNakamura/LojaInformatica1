@@ -26,27 +26,19 @@ namespace LojaInformatica1.Cadastros
        
         }
 
-        //private void rdbPJ_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    new FormPJ().Show();
-        //}
-
-        //private void rdbPF_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    new FormPF().Show();
-        //}
-
-        private void grbTipoPessoa_Enter(object sender, EventArgs e)
+        private void rdbPJ_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdbPF.Checked)
-            {
-                new FormPF().Show();
-            }
-            else
-            {
-                new FormPJ().Show();
-            }
+            new FormPJ().Show();
         }
+
+        private void rdbPF_CheckedChanged(object sender, EventArgs e)
+        {
+            new FormPF().Show();
+        }
+
+     
+
+      
 
 
        

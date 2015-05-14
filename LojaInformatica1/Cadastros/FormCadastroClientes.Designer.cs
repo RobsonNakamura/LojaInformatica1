@@ -174,7 +174,9 @@
             // 
             // rdbPJ
             // 
+            this.rdbPJ.AutoCheck = false;
             this.rdbPJ.AutoSize = true;
+            this.rdbPJ.Enabled = false;
             this.rdbPJ.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbPJ.Location = new System.Drawing.Point(204, 34);
             this.rdbPJ.Name = "rdbPJ";
@@ -187,7 +189,10 @@
             // 
             // rdbPF
             // 
+            this.rdbPF.AutoCheck = false;
             this.rdbPF.AutoSize = true;
+            this.rdbPF.Checked = true;
+            this.rdbPF.Enabled = false;
             this.rdbPF.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbPF.Location = new System.Drawing.Point(31, 34);
             this.rdbPF.Name = "rdbPF";
@@ -196,7 +201,6 @@
             this.rdbPF.TabStop = true;
             this.rdbPF.Text = "Pessoa Física";
             this.rdbPF.UseVisualStyleBackColor = true;
-            this.rdbPF.CheckedChanged += new System.EventHandler(this.rdbPF_CheckedChanged);
             // 
             // FormCadastroClientes
             // 
