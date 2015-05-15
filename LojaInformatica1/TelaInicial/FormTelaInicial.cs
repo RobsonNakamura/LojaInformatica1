@@ -31,17 +31,20 @@ namespace LojaInformatica1.TelaInicial
             }
         }
         //Função para abrir uma janela dentro da mesma janela
-        private void funcionáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void funcionariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms["FormFuncionario"] == null)
             {
-                FormFuncionario cadastroFuncionarios = new FormFuncionario();
-                cadastroFuncionarios.MdiParent = this;
-                cadastroFuncionarios.Show();
-                cadastroFuncionarios.WindowState = FormWindowState.Minimized;
-                cadastroFuncionarios.WindowState = FormWindowState.Maximized;
+                FormFuncionario funcionarios = new FormFuncionario();
+                funcionarios.MdiParent = this;
+                funcionarios.Show();
+                funcionarios.WindowState = FormWindowState.Minimized;
+                funcionarios.WindowState = FormWindowState.Maximized;
 
             }
+        
+
+        
         }
     }
 }

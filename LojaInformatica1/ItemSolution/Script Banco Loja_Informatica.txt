@@ -1,0 +1,173 @@
+CREATE TABLE Funcionario_OrdemServico (
+	IdFuncionario int NOT NULL, 
+	IdOrdemServico int NOT NULL, 
+	IdTipoParticipacao int NOT NULL, PRIMARY KEY (IdFuncionario, IdOrdemServico)
+);
+
+CREATE TABLE TipoParticipacao (
+	IdTipoParticipacao int IDENTITY NOT NULL, 
+	Descricao varchar(50) NOT NULL, PRIMARY KEY (IdTipoParticipacao)
+);
+
+CREATE TABLE Equipamento (
+IdEquipamento int IDENTITY NOT NULL, 
+	Modelo varchar(100) NOT NULL, 
+	NumeroSerie varchar(50) NOT NULL, 
+	Fabricante varchar(100) NULL, 
+	DataEntrada date NOT NULL, 
+	IdOrdemServico int NOT NULL, 
+	IdTipoEquipamento int NOT NULL, PRIMARY KEY (IdEquipamento)
+);
+
+CREATE TABLE TipoEquipamento (
+	IdTipoEquipamento int IDENTITY NOT NULL, 
+	Descricao varchar(50) NOT NULL, PRIMARY KEY (IdTipoEquipamento)
+);
+
+CREATE TABLE ServicoInterno (
+	IdServicoInterno int IDENTITY NOT NULL, 
+	EntradaEquipamento date NOT NULL, 
+	SaidaEquipamento date NULL, 
+	Valor float(6) NOT NULL, 
+	Garantia text NULL, 
+	ObservacaoTecnico text NOT NULL, 
+	IdOrdemServico int NOT NULL, PRIMARY KEY (IdServicoInterno)
+);
+
+CREATE TABLE ServicosExternos (
+	IdServicoExterno int IDENTITY NOT NULL, 
+	DataVisita date NOT NULL, 
+	TipoServico varchar(150) NOT NULL, 
+	Valor float(6) NOT NULL, 
+	Observacao text NOT NULL, 
+	IdOrdemServico int NOT NULL, PRIMARY KEY (IdServicoExterno)
+);
+
+CREATE TABLE OrdemServico (
+	IdOrdemServico int IDENTITY NOT NULL, 
+	Observacao text NOT NULL, 
+	Valor float(6) NOT NULL, 
+	DataPagamento date NULL, 
+	IdCliente int NOT NULL, PRIMARY KEY (IdOrdemServico)
+);
+
+CREATE TABLE Cliente (
+	IdCliente int NOT NULL, 
+	DataCadastro date NOT NULL, PRIMARY KEY (IdCliente)
+);
+
+CREATE TABLE Cargo (
+	IdCargo int IDENTITY NOT NULL, 
+	Descricao varchar(50) NOT NULL, PRIMARY KEY (IdCargo)
+);
+
+CREATE TABLE Funcionario (
+	IdFuncionario int NOT NULL, 
+	DataAdmissao date NOT NULL, 
+	DataDemissao date NULL, 
+	ValeRefeicao char(1) NOT NULL, 
+	ValeTransporte char(1) NOT NULL, 
+	IdCargo int NOT NULL, PRIMARY KEY (IdFuncionario)
+);
+
+CREATE TABLE Telefone (
+	IdTelefone int IDENTITY NOT NULL, 
+	Numero varchar(14) NOT NULL, 
+	IdPessoa int NOT NULL, 
+	IdTipoTelefone int NOT NULL, PRIMARY KEY (IdTelefone)
+);
+
+CREATE TABLE TipoTelefone (
+	IdTipoTelefone int IDENTITY NOT NULL, 
+	Descricao varchar(50) NOT NULL, PRIMARY KEY (IdTipoTelefone)
+);
+
+CREATE TABLE Endereco (
+	IdEndereco int IDENTITY NOT NULL, 
+	NomeEndereco varchar(200) NOT NULL, 
+	CEP varchar(10) NULL, 
+	Bairro varchar(150) NULL, 
+	Cidade varchar(150) NULL, 
+	IdPessoa int NOT NULL, 
+	UF char(2) NOT NULL, PRIMARY KEY (IdEndereco)
+);
+
+CREATE TABLE Estado (
+	UF char(2) NOT NULL, 
+	NomeEstado varchar(70) NOT NULL, PRIMARY KEY (UF)
+);
+
+CREATE TABLE PessoaJuridica (
+	IdPessoaJuridica int NOT NULL, 
+	CNPJ varchar(18) NOT NULL UNIQUE, 
+	RazaoSocial varchar(150) NOT NULL, 
+	InscricaoEstadual varchar(12) NULL, PRIMARY KEY (IdPessoaJuridica)
+);
+
+CREATE TABLE PessoaFisica (
+	IdPessoaFisica int NOT NULL, 
+	CPF varchar(14) NOT NULL UNIQUE, 
+	RG varchar(11) NULL, 
+	Sexo char(1) NOT NULL,PRIMARY KEY (IdPessoaFisica)
+);
+
+CREATE TABLE Pessoa (
+	IdPessoa int IDENTITY NOT NULL, 
+	Nome varchar(150) NOT NULL, 
+	Email varchar(150) NULL, 
+	Observacao text NULL, 
+	Login varchar(30) NOT NULL UNIQUE, 
+	senha varchar(30) NOT NULL, PRIMARY KEY (IdPessoa)
+);
+
+ALTER TABLE Funcionario_OrdemServico ADD CONSTRAINT FKFuncionari681175 
+	FOREIGN KEY (IdOrdemServico) REFERENCES OrdemServico (IdOrdemServico);
+
+ALTER TABLE Funcionario_OrdemServico ADD CONSTRAINT FKFuncionari997337 
+	FOREIGN KEY (IdFuncionario) REFERENCES Funcionario (IdFuncionario);
+
+ALTER TABLE Funcionario_OrdemServico ADD CONSTRAINT FKFuncionari589104 
+	FOREIGN KEY (IdTipoParticipacao) REFERENCES TipoParticipacao (IdTipoParticipacao);
+
+ALTER TABLE PessoaFisica ADD CONSTRAINT FKPessoaFisi201024 
+	FOREIGN KEY (IdPessoaFisica) REFERENCES Pessoa (IdPessoa);
+
+ALTER TABLE PessoaJuridica ADD CONSTRAINT FKPessoaJuri758441 
+	FOREIGN KEY (IdPessoaJuridica) REFERENCES Pessoa (IdPessoa);
+
+ALTER TABLE Endereco ADD CONSTRAINT FKEndereco120717 
+	FOREIGN KEY (UF) REFERENCES Estado (UF);
+
+ALTER TABLE Endereco ADD CONSTRAINT FKEndereco471629 
+	FOREIGN KEY (IdPessoa) REFERENCES Pessoa (IdPessoa);
+
+ALTER TABLE Telefone ADD CONSTRAINT FKTelefone506430 
+	FOREIGN KEY (IdTipoTelefone) REFERENCES TipoTelefone (IdTipoTelefone);
+
+ALTER TABLE Telefone ADD CONSTRAINT FKTelefone32057 
+	FOREIGN KEY (IdPessoa) REFERENCES Pessoa (IdPessoa);
+
+ALTER TABLE Funcionario ADD CONSTRAINT FKFuncionari166755 
+	FOREIGN KEY (IdFuncionario) REFERENCES Pessoa (IdPessoa);
+
+ALTER TABLE Funcionario ADD CONSTRAINT FKFuncionari298568 
+	FOREIGN KEY (IdCargo) REFERENCES Cargo (IdCargo);
+
+ALTER TABLE Cliente ADD CONSTRAINT FKCliente186779 
+	FOREIGN KEY (IdCliente) REFERENCES Pessoa (IdPessoa);
+
+ALTER TABLE OrdemServico ADD CONSTRAINT FKOrdemServi549840 
+	FOREIGN KEY (IdCliente) REFERENCES Cliente (IdCliente);
+
+ALTER TABLE ServicosExternos ADD CONSTRAINT FKServicosEx469312 
+	FOREIGN KEY (IdOrdemServico) REFERENCES OrdemServico (IdOrdemServico);
+
+ALTER TABLE ServicoInterno ADD CONSTRAINT FKServicoInt140135 
+	FOREIGN KEY (IdOrdemServico) REFERENCES OrdemServico (IdOrdemServico);
+
+ALTER TABLE Equipamento ADD CONSTRAINT FKEquipament977259 
+	FOREIGN KEY (IdOrdemServico) REFERENCES OrdemServico (IdOrdemServico);
+
+ALTER TABLE Equipamento ADD CONSTRAINT FKEquipament237266 
+	FOREIGN KEY (IdTipoEquipamento) REFERENCES TipoEquipamento (IdTipoEquipamento);
+

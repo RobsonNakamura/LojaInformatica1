@@ -23,6 +23,16 @@ namespace LojaInformatica1.TelaPrincipal
 
         }
 
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+        
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnAcessar_Click(object sender, EventArgs e)
         {
             if ((txtUsuario.Text == "admin") && (txtSenha.Text == "admin")){
@@ -38,6 +48,6 @@ namespace LojaInformatica1.TelaPrincipal
         {
             Application.Exit();
         }
-        
+  
     }
 }

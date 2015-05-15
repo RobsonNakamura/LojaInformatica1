@@ -90,6 +90,7 @@
             this.equipamentosToolStripMenuItem.Name = "equipamentosToolStripMenuItem";
             this.equipamentosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.equipamentosToolStripMenuItem.Text = "Equipamentos";
+            this.equipamentosToolStripMenuItem.Click += new System.EventHandler(this.equipamentosToolStripMenuItem_Click);
             // 
             // editarToolStripMenuItem
             // 
