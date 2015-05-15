@@ -35,7 +35,9 @@ namespace LojaInformatica1.TelaPrincipal
 
         private void btnAcessar_Click(object sender, EventArgs e)
         {
-            if ((txtUsuario.Text == "admin") && (txtSenha.Text == "admin")){
+            
+            if ((txtUsuario.Text == "admin") && (txtSenha.Text == "admin"))
+            {
                 new FormTelaInicial().Show();
             }
             else 

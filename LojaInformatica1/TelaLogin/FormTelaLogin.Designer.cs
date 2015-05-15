@@ -51,6 +51,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.btnAcessar);
             this.panel1.Controls.Add(this.txtSenha);
@@ -126,9 +127,11 @@
             this.ClientSize = new System.Drawing.Size(404, 340);
             this.Controls.Add(this.lblAcesso);
             this.Controls.Add(this.panel1);
+            this.IsMdiContainer = true;
             this.Name = "FormTelaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Acesso";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

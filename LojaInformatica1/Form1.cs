@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using LojaInformatica1.TelaPrincipal;
+using LojaInformatica1.Cadastros; 
+
 
 namespace LojaInformatica1
 {
@@ -19,13 +21,25 @@ namespace LojaInformatica1
 
         private void efetuarLoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["FormTelaLogin"] == null)
+            // vai pra tela de login
+
+            //if (Application.OpenForms["FormTelaLogin"] == null)
+            //{
+            //    FormTelaLogin telaLogin = new FormTelaLogin();
+            //    //telaLogin.MdiParent = this;
+            //    telaLogin.Show();
+            //    telaLogin.WindowState = FormWindowState.Minimized;
+            //    telaLogin.WindowState = FormWindowState.Maximized;
+
+            //}
+
+            if (Application.OpenForms["FormCadastroClientes"] == null)
             {
-                FormTelaLogin login = new FormTelaLogin();
-                login.MdiParent = this;
-                login.Show();
-                login.WindowState = FormWindowState.Minimized;
-                login.WindowState = FormWindowState.Maximized;
+                FormCadastroClientes cadastroClientes = new FormCadastroClientes();
+                //cadastroClientes.MdiParent = this;
+                cadastroClientes.Show();
+                cadastroClientes.WindowState = FormWindowState.Minimized;
+                cadastroClientes.WindowState = FormWindowState.Maximized;
 
             }
         }
