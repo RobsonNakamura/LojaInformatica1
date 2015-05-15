@@ -35,16 +35,16 @@
             this.ptbFotoFuncionario = new System.Windows.Forms.PictureBox();
             this.dtpDataDemissao = new System.Windows.Forms.DateTimePicker();
             this.dtpDataEmissao = new System.Windows.Forms.DateTimePicker();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCodFuncionario = new System.Windows.Forms.TextBox();
+            this.txtCargoFuncionario = new System.Windows.Forms.TextBox();
+            this.txtTelefoneFuncionario = new System.Windows.Forms.TextBox();
+            this.txtCelularFuncionario = new System.Windows.Forms.TextBox();
+            this.txtCPFFuncionario = new System.Windows.Forms.TextBox();
+            this.txtCidadeFuncionario = new System.Windows.Forms.TextBox();
+            this.txtBairroFuncionario = new System.Windows.Forms.TextBox();
+            this.txtEnderecoFuncionario = new System.Windows.Forms.TextBox();
+            this.txtEmailFuncionario = new System.Windows.Forms.TextBox();
+            this.txtNomeFuncionario = new System.Windows.Forms.TextBox();
             this.grbValeRefeicao = new System.Windows.Forms.GroupBox();
             this.rdbSimRefeicao = new System.Windows.Forms.RadioButton();
             this.rdbNaoRefeicao = new System.Windows.Forms.RadioButton();
@@ -53,7 +53,7 @@
             this.rdbNaoTransporte = new System.Windows.Forms.RadioButton();
             this.lblDataDemissaoFuncionario = new System.Windows.Forms.Label();
             this.lblDataEmissaoFuncionario = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblCargoFuncionario = new System.Windows.Forms.Label();
             this.lblCodFuncionario = new System.Windows.Forms.Label();
             this.lblCelularFuncionario = new System.Windows.Forms.Label();
             this.lblTelefoneFuncionario = new System.Windows.Forms.Label();
@@ -67,8 +67,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblLoginFuncionario = new System.Windows.Forms.Label();
             this.lblSenhaFuncionario = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtSenhaFuncionario = new System.Windows.Forms.TextBox();
+            this.txtLoginFuncionario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFotoFuncionario)).BeginInit();
             this.grbValeRefeicao.SuspendLayout();
             this.grbValeTransporte.SuspendLayout();
@@ -95,11 +95,39 @@
             // cbxEstadoFuncionario
             // 
             this.cbxEstadoFuncionario.FormattingEnabled = true;
+            this.cbxEstadoFuncionario.Items.AddRange(new object[] {
+            "Acre (AC)",
+            "Alagoas (AL)",
+            "Amapá (AP)",
+            "Amazonas (AM)",
+            "Bahia (BA)",
+            "Ceará (CE)",
+            "Distrito Federal (DF)",
+            "Espírito Santo (ES)",
+            "Goiás (GO)",
+            "Maranhão (MA)",
+            "Mato Grosso (MT)",
+            "Mato Grosso do Sul (MS)",
+            "Minas Gerais (MG)",
+            "Pará (PA)",
+            "Paraíba (PB)",
+            "Paraná (PR)",
+            "Pernambuco (PE)",
+            "Piauí (PI)",
+            "Rio de Janeiro (RJ)",
+            "Rio Grande do Norte (RN)",
+            "Rio Grande do Sul (RS)",
+            "Rondônia (RO)",
+            "Roraima (RR)",
+            "Santa Catarina (SC)",
+            "São Paulo (SP)",
+            "Sergipe (SE)",
+            "Tocantins (TO)"});
             this.cbxEstadoFuncionario.Location = new System.Drawing.Point(90, 240);
             this.cbxEstadoFuncionario.Name = "cbxEstadoFuncionario";
             this.cbxEstadoFuncionario.Size = new System.Drawing.Size(171, 21);
             this.cbxEstadoFuncionario.TabIndex = 42;
-            this.cbxEstadoFuncionario.Text = "Selecione o estado";
+            this.cbxEstadoFuncionario.Text = "Selecione um estado...";
             // 
             // btnFotoFuncionario
             // 
@@ -140,75 +168,75 @@
             this.dtpDataEmissao.TabIndex = 39;
             this.dtpDataEmissao.Value = new System.DateTime(2015, 5, 4, 0, 0, 0, 0);
             // 
-            // textBox11
+            // txtCodFuncionario
             // 
-            this.textBox11.Location = new System.Drawing.Point(90, 312);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(171, 20);
-            this.textBox11.TabIndex = 31;
+            this.txtCodFuncionario.Location = new System.Drawing.Point(90, 312);
+            this.txtCodFuncionario.Name = "txtCodFuncionario";
+            this.txtCodFuncionario.Size = new System.Drawing.Size(171, 20);
+            this.txtCodFuncionario.TabIndex = 31;
             // 
-            // textBox8
+            // txtCargoFuncionario
             // 
-            this.textBox8.Location = new System.Drawing.Point(315, 312);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(206, 20);
-            this.textBox8.TabIndex = 32;
+            this.txtCargoFuncionario.Location = new System.Drawing.Point(315, 312);
+            this.txtCargoFuncionario.Name = "txtCargoFuncionario";
+            this.txtCargoFuncionario.Size = new System.Drawing.Size(206, 20);
+            this.txtCargoFuncionario.TabIndex = 32;
             // 
-            // textBox10
+            // txtTelefoneFuncionario
             // 
-            this.textBox10.Location = new System.Drawing.Point(90, 275);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(172, 20);
-            this.textBox10.TabIndex = 29;
+            this.txtTelefoneFuncionario.Location = new System.Drawing.Point(90, 275);
+            this.txtTelefoneFuncionario.Name = "txtTelefoneFuncionario";
+            this.txtTelefoneFuncionario.Size = new System.Drawing.Size(172, 20);
+            this.txtTelefoneFuncionario.TabIndex = 29;
             // 
-            // textBox7
+            // txtCelularFuncionario
             // 
-            this.textBox7.Location = new System.Drawing.Point(315, 275);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(206, 20);
-            this.textBox7.TabIndex = 30;
+            this.txtCelularFuncionario.Location = new System.Drawing.Point(315, 275);
+            this.txtCelularFuncionario.Name = "txtCelularFuncionario";
+            this.txtCelularFuncionario.Size = new System.Drawing.Size(206, 20);
+            this.txtCelularFuncionario.TabIndex = 30;
             // 
-            // textBox6
+            // txtCPFFuncionario
             // 
-            this.textBox6.Location = new System.Drawing.Point(315, 240);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(206, 20);
-            this.textBox6.TabIndex = 33;
+            this.txtCPFFuncionario.Location = new System.Drawing.Point(315, 240);
+            this.txtCPFFuncionario.Name = "txtCPFFuncionario";
+            this.txtCPFFuncionario.Size = new System.Drawing.Size(206, 20);
+            this.txtCPFFuncionario.TabIndex = 33;
             // 
-            // textBox5
+            // txtCidadeFuncionario
             // 
-            this.textBox5.Location = new System.Drawing.Point(90, 208);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(431, 20);
-            this.textBox5.TabIndex = 36;
+            this.txtCidadeFuncionario.Location = new System.Drawing.Point(90, 208);
+            this.txtCidadeFuncionario.Name = "txtCidadeFuncionario";
+            this.txtCidadeFuncionario.Size = new System.Drawing.Size(431, 20);
+            this.txtCidadeFuncionario.TabIndex = 36;
             // 
-            // textBox4
+            // txtBairroFuncionario
             // 
-            this.textBox4.Location = new System.Drawing.Point(90, 176);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(431, 20);
-            this.textBox4.TabIndex = 37;
+            this.txtBairroFuncionario.Location = new System.Drawing.Point(90, 176);
+            this.txtBairroFuncionario.Name = "txtBairroFuncionario";
+            this.txtBairroFuncionario.Size = new System.Drawing.Size(431, 20);
+            this.txtBairroFuncionario.TabIndex = 37;
             // 
-            // textBox3
+            // txtEnderecoFuncionario
             // 
-            this.textBox3.Location = new System.Drawing.Point(90, 142);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(431, 20);
-            this.textBox3.TabIndex = 34;
+            this.txtEnderecoFuncionario.Location = new System.Drawing.Point(90, 142);
+            this.txtEnderecoFuncionario.Name = "txtEnderecoFuncionario";
+            this.txtEnderecoFuncionario.Size = new System.Drawing.Size(431, 20);
+            this.txtEnderecoFuncionario.TabIndex = 34;
             // 
-            // textBox2
+            // txtEmailFuncionario
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 110);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(431, 20);
-            this.textBox2.TabIndex = 35;
+            this.txtEmailFuncionario.Location = new System.Drawing.Point(90, 110);
+            this.txtEmailFuncionario.Name = "txtEmailFuncionario";
+            this.txtEmailFuncionario.Size = new System.Drawing.Size(431, 20);
+            this.txtEmailFuncionario.TabIndex = 35;
             // 
-            // textBox1
+            // txtNomeFuncionario
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 80);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(431, 20);
-            this.textBox1.TabIndex = 28;
+            this.txtNomeFuncionario.Location = new System.Drawing.Point(90, 80);
+            this.txtNomeFuncionario.Name = "txtNomeFuncionario";
+            this.txtNomeFuncionario.Size = new System.Drawing.Size(431, 20);
+            this.txtNomeFuncionario.TabIndex = 28;
             // 
             // grbValeRefeicao
             // 
@@ -294,14 +322,14 @@
             this.lblDataEmissaoFuncionario.TabIndex = 17;
             this.lblDataEmissaoFuncionario.Text = "Data de Emissão:";
             // 
-            // label12
+            // lblCargoFuncionario
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(267, 319);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 13);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "Cargo:";
+            this.lblCargoFuncionario.AutoSize = true;
+            this.lblCargoFuncionario.Location = new System.Drawing.Point(267, 319);
+            this.lblCargoFuncionario.Name = "lblCargoFuncionario";
+            this.lblCargoFuncionario.Size = new System.Drawing.Size(38, 13);
+            this.lblCargoFuncionario.TabIndex = 18;
+            this.lblCargoFuncionario.Text = "Cargo:";
             // 
             // lblCodFuncionario
             // 
@@ -421,19 +449,19 @@
             this.lblSenhaFuncionario.TabIndex = 18;
             this.lblSenhaFuncionario.Text = "Senha:";
             // 
-            // textBox9
+            // txtSenhaFuncionario
             // 
-            this.textBox9.Location = new System.Drawing.Point(316, 345);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(206, 20);
-            this.textBox9.TabIndex = 32;
+            this.txtSenhaFuncionario.Location = new System.Drawing.Point(316, 345);
+            this.txtSenhaFuncionario.Name = "txtSenhaFuncionario";
+            this.txtSenhaFuncionario.Size = new System.Drawing.Size(206, 20);
+            this.txtSenhaFuncionario.TabIndex = 32;
             // 
-            // textBox12
+            // txtLoginFuncionario
             // 
-            this.textBox12.Location = new System.Drawing.Point(91, 345);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(171, 20);
-            this.textBox12.TabIndex = 31;
+            this.txtLoginFuncionario.Location = new System.Drawing.Point(91, 345);
+            this.txtLoginFuncionario.Name = "txtLoginFuncionario";
+            this.txtLoginFuncionario.Size = new System.Drawing.Size(171, 20);
+            this.txtLoginFuncionario.TabIndex = 31;
             // 
             // FormFuncionario
             // 
@@ -447,25 +475,25 @@
             this.Controls.Add(this.ptbFotoFuncionario);
             this.Controls.Add(this.dtpDataDemissao);
             this.Controls.Add(this.dtpDataEmissao);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLoginFuncionario);
+            this.Controls.Add(this.txtSenhaFuncionario);
+            this.Controls.Add(this.txtCodFuncionario);
+            this.Controls.Add(this.txtCargoFuncionario);
+            this.Controls.Add(this.txtTelefoneFuncionario);
+            this.Controls.Add(this.txtCelularFuncionario);
+            this.Controls.Add(this.txtCPFFuncionario);
+            this.Controls.Add(this.txtCidadeFuncionario);
+            this.Controls.Add(this.txtBairroFuncionario);
+            this.Controls.Add(this.txtEnderecoFuncionario);
+            this.Controls.Add(this.txtEmailFuncionario);
+            this.Controls.Add(this.txtNomeFuncionario);
             this.Controls.Add(this.grbValeRefeicao);
             this.Controls.Add(this.grbValeTransporte);
             this.Controls.Add(this.lblDataDemissaoFuncionario);
             this.Controls.Add(this.lblSenhaFuncionario);
             this.Controls.Add(this.lblDataEmissaoFuncionario);
             this.Controls.Add(this.lblLoginFuncionario);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblCargoFuncionario);
             this.Controls.Add(this.lblCodFuncionario);
             this.Controls.Add(this.lblCelularFuncionario);
             this.Controls.Add(this.lblTelefoneFuncionario);
@@ -478,7 +506,7 @@
             this.Controls.Add(this.lblNomeFuncionario);
             this.Controls.Add(this.label1);
             this.Name = "FormFuncionario";
-            this.Text = "FormFuncionario";
+            this.Text = "Cadastro de Funcionários";
             ((System.ComponentModel.ISupportInitialize)(this.ptbFotoFuncionario)).EndInit();
             this.grbValeRefeicao.ResumeLayout(false);
             this.grbValeRefeicao.PerformLayout();
@@ -498,16 +526,16 @@
         private System.Windows.Forms.PictureBox ptbFotoFuncionario;
         private System.Windows.Forms.DateTimePicker dtpDataDemissao;
         private System.Windows.Forms.DateTimePicker dtpDataEmissao;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCodFuncionario;
+        private System.Windows.Forms.TextBox txtCargoFuncionario;
+        private System.Windows.Forms.TextBox txtTelefoneFuncionario;
+        private System.Windows.Forms.TextBox txtCelularFuncionario;
+        private System.Windows.Forms.TextBox txtCPFFuncionario;
+        private System.Windows.Forms.TextBox txtCidadeFuncionario;
+        private System.Windows.Forms.TextBox txtBairroFuncionario;
+        private System.Windows.Forms.TextBox txtEnderecoFuncionario;
+        private System.Windows.Forms.TextBox txtEmailFuncionario;
+        private System.Windows.Forms.TextBox txtNomeFuncionario;
         private System.Windows.Forms.GroupBox grbValeRefeicao;
         private System.Windows.Forms.RadioButton rdbSimRefeicao;
         private System.Windows.Forms.RadioButton rdbNaoRefeicao;
@@ -516,7 +544,7 @@
         private System.Windows.Forms.RadioButton rdbNaoTransporte;
         private System.Windows.Forms.Label lblDataDemissaoFuncionario;
         private System.Windows.Forms.Label lblDataEmissaoFuncionario;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblCargoFuncionario;
         private System.Windows.Forms.Label lblCodFuncionario;
         private System.Windows.Forms.Label lblCelularFuncionario;
         private System.Windows.Forms.Label lblTelefoneFuncionario;
@@ -530,7 +558,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblLoginFuncionario;
         private System.Windows.Forms.Label lblSenhaFuncionario;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtSenhaFuncionario;
+        private System.Windows.Forms.TextBox txtLoginFuncionario;
     }
 }

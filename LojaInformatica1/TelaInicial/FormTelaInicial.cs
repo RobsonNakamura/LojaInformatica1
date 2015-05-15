@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using LojaInformatica1.Cadastros;
+using LojaInformatica1.EditarCadastro;
 
 namespace LojaInformatica1.TelaInicial
 {
@@ -27,24 +28,43 @@ namespace LojaInformatica1.TelaInicial
                 cadastroClientes.Show();
                 cadastroClientes.WindowState = FormWindowState.Minimized;
                 cadastroClientes.WindowState = FormWindowState.Maximized;
-
             }
         }
-        //Função para abrir uma janela dentro da mesma janela
-        private void funcionariosToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void funcionáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Application.OpenForms["FormFuncionario"] == null)
             {
-                FormFuncionario funcionarios = new FormFuncionario();
-                funcionarios.MdiParent = this;
-                funcionarios.Show();
-                funcionarios.WindowState = FormWindowState.Minimized;
-                funcionarios.WindowState = FormWindowState.Maximized;
-
+                FormFuncionario cadastroFuncionarios = new FormFuncionario();
+                cadastroFuncionarios.MdiParent = this;
+                cadastroFuncionarios.Show();
+                cadastroFuncionarios.WindowState = FormWindowState.Minimized;
+                cadastroFuncionarios.WindowState = FormWindowState.Maximized;
             }
-        
+        }
 
-        
+        private void equipamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["FormEquipamento"] == null)
+            {
+                FormEquipamento cadastroEquipamento = new FormEquipamento();
+                cadastroEquipamento.MdiParent = this;
+                cadastroEquipamento.Show();
+                cadastroEquipamento.WindowState = FormWindowState.Minimized;
+                cadastroEquipamento.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["FormEditarCliente"] == null)
+            {
+                FormEditarCliente editarClientes = new FormEditarCliente();
+                editarClientes.MdiParent = this;
+                editarClientes.Show();
+                editarClientes.WindowState = FormWindowState.Minimized;
+                editarClientes.WindowState = FormWindowState.Maximized;
+            }
         }
     }
 }
