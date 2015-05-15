@@ -96,7 +96,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(163, 20);
             this.txtUsuario.TabIndex = 1;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // lblSenha
             // 
@@ -125,8 +124,8 @@
             this.ClientSize = new System.Drawing.Size(404, 340);
             this.Controls.Add(this.lblAcesso);
             this.Controls.Add(this.panel1);
+            this.IsMdiContainer = true;
             this.Name = "FormTelaLogin";
-            this.ShowInTaskbar = false;
             this.Text = "Acesso";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

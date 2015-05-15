@@ -19,7 +19,15 @@ namespace LojaInformatica1
 
         private void efetuarLoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new FormTelaLogin().Show();
+            if (Application.OpenForms["FormTelaLogin"] == null)
+            {
+                FormTelaLogin login = new FormTelaLogin();
+                login.MdiParent = this;
+                login.Show();
+                login.WindowState = FormWindowState.Minimized;
+                login.WindowState = FormWindowState.Maximized;
+
+            }
         }
     }
 }

@@ -15,10 +15,7 @@ namespace LojaInformatica1.Cadastros
     public partial class FormCadastroClientes : Form
     {
 
-        private LojaInformaticaEntities db;
-        private ClienteData clienteData;
-        private PessoaFisicaData pessoaFisicaData;
-        private PessoaJuridicaData pessoaJuridicaData;
+       
 
         public FormCadastroClientes()
         {
@@ -26,16 +23,7 @@ namespace LojaInformatica1.Cadastros
        
         }
 
-        private void rdbPJ_CheckedChanged(object sender, EventArgs e)
-        {
-            new FormPJ().Show();
-        }
-
-        private void rdbPF_CheckedChanged(object sender, EventArgs e)
-        {
-            new FormPF().Show();
-        }
-
+        
      
 
       
