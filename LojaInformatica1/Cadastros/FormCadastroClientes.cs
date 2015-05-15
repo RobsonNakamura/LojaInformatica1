@@ -18,22 +18,27 @@ namespace LojaInformatica1.Cadastros
         public FormCadastroClientes()
         {
             InitializeComponent();
-       
+            grbPF.Visible = false;
+            grbPJ.Visible = false;       
         }
 
         private void rdbPF_CheckedChanged(object sender, EventArgs e)
         {
-            FormPF.
-            
-           
+            if (rdbPF.Checked)
+            {
+                grbPF.Visible = true;
+                grbPJ.Visible = false;
+            }
         }
 
         private void rdbPJ_CheckedChanged(object sender, EventArgs e)
         {
-            rdbPJ.Visible = true;
-            new FormPJ().Show();
+            if (rdbPJ.Checked)
+            {
+                grbPF.Visible = false;
+                grbPJ.Visible = true;
+            }
         }
-
     }
 }
 

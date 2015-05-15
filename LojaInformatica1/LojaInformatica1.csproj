@@ -61,18 +61,6 @@
     <Compile Include="Cadastros\FormFuncionario.Designer.cs">
       <DependentUpon>FormFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastros\FormPF.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastros\FormPF.Designer.cs">
-      <DependentUpon>FormPF.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastros\FormPJ.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastros\FormPJ.Designer.cs">
-      <DependentUpon>FormPJ.cs</DependentUpon>
-    </Compile>
     <Compile Include="Data\CargoData.cs" />
     <Compile Include="Data\ClienteData.cs" />
     <Compile Include="Data\EnderecoData.cs" />
@@ -126,12 +114,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\FormFuncionario.resx">
       <DependentUpon>FormFuncionario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\FormPF.resx">
-      <DependentUpon>FormPF.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\FormPJ.resx">
-      <DependentUpon>FormPJ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarCadastro\FormEditarCliente.resx">
       <DependentUpon>FormEditarCliente.cs</DependentUpon>
