@@ -26,3 +26,4 @@ C:\Users\Faculdade\Downloads\LojaInformatica1-master\LojaInformatica1-master\Loj
 C:\Users\Faculdade\Downloads\LojaInformatica1-master\LojaInformatica1-master\LojaInformatica1\obj\x86\Debug\LojaInformatica1.TelaPrincipal.FormTelaLogin.resources
 C:\Users\Faculdade\Downloads\LojaInformatica1-master\LojaInformatica1-master\LojaInformatica1\obj\x86\Debug\LojaInformatica1.csproj.GenerateResource.Cache
 C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.Cadastros.FormEquipamento.resources
+C:\Users\Faculdade\Desktop\Projeto TCC Visual Studio 10 Ultimate\Projeto_TCC_Loja_Informatica3\LojaInformatica1\LojaInformatica1\obj\x86\Debug\LojaInformatica1.OrdemServico.FormGerarOrdemServico.resources

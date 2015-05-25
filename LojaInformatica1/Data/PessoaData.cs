@@ -24,5 +24,31 @@ namespace LojaInformatica1.Data
             return pessoas.ToList();
         }
 
+        public string salvarPessoa(Pessoa pessoa)
+        {
+            string erro = null;
+            try
+            {
+                if (pessoa.IdPessoa== 0)
+                {
+                    pessoas.AddObject(pessoa);
+                }
+                else
+                {
+                    if (pessoa.EntityState == System.Data.EntityState.Detached)
+                    {
+                        pessoas.Attach(pessoa);
+                    }
+                    db.ObjectStateManager.ChangeObjectState(pessoa, System.Data.EntityState.Modified);
+                }
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                erro = ex.Message;
+            }
+            return erro;
+        }
+
     }
 }

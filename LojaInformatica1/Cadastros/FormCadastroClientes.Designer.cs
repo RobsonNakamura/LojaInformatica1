@@ -58,7 +58,7 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.grbPF = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataNascimentoPF = new System.Windows.Forms.DateTimePicker();
             this.txtRGPF = new System.Windows.Forms.TextBox();
             this.txtCPFPF = new System.Windows.Forms.TextBox();
             this.lblDataNacimentoPF = new System.Windows.Forms.Label();
@@ -137,6 +137,7 @@
             this.btnSalvar.TabIndex = 91;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // cbxEstado
             // 
@@ -337,7 +338,7 @@
             // 
             // grbPF
             // 
-            this.grbPF.Controls.Add(this.dateTimePicker1);
+            this.grbPF.Controls.Add(this.dtpDataNascimentoPF);
             this.grbPF.Controls.Add(this.txtRGPF);
             this.grbPF.Controls.Add(this.txtCPFPF);
             this.grbPF.Controls.Add(this.lblDataNacimentoPF);
@@ -350,14 +351,14 @@
             this.grbPF.TabStop = false;
             this.grbPF.Text = "Pessoa Física";
             // 
-            // dateTimePicker1
+            // dtpDataNascimentoPF
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(143, 61);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(303, 20);
-            this.dateTimePicker1.TabIndex = 64;
-            this.dateTimePicker1.Value = new System.DateTime(2015, 5, 15, 0, 0, 0, 0);
+            this.dtpDataNascimentoPF.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataNascimentoPF.Location = new System.Drawing.Point(143, 61);
+            this.dtpDataNascimentoPF.Name = "dtpDataNascimentoPF";
+            this.dtpDataNascimentoPF.Size = new System.Drawing.Size(303, 20);
+            this.dtpDataNascimentoPF.TabIndex = 64;
+            this.dtpDataNascimentoPF.Value = new System.DateTime(2015, 5, 15, 0, 0, 0, 0);
             // 
             // txtRGPF
             // 
@@ -547,7 +548,7 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox grbPF;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDataNascimentoPF;
         private System.Windows.Forms.TextBox txtRGPF;
         private System.Windows.Forms.TextBox txtCPFPF;
         private System.Windows.Forms.Label lblDataNacimentoPF;

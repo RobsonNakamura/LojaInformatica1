@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using LojaInformatica1.Cadastros;
 using LojaInformatica1.EditarCadastro;
+using LojaInformatica1.OrdemServico;
 
 namespace LojaInformatica1.TelaInicial
 {
@@ -66,5 +67,21 @@ namespace LojaInformatica1.TelaInicial
                 editarClientes.WindowState = FormWindowState.Maximized;
             }
         }
+
+        private void gerarOrdemDeServiçoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["FormGerarOrdemServico"] == null)
+            {
+                FormGerarOrdemServico gerarOrdemServico = new FormGerarOrdemServico();
+                gerarOrdemServico.MdiParent = this;
+                gerarOrdemServico.Show();
+                gerarOrdemServico.WindowState = FormWindowState.Minimized;
+                gerarOrdemServico.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        
+
+        
     }
 }

@@ -129,7 +129,7 @@
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
             this.Name = "FormTelaLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acesso";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);

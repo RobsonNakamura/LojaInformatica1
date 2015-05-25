@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using LojaInformatica1.TelaInicial;
 using LojaInformatica1.TelaPrincipal;
+using LojaInformatica1.Cadastros;
 
 
 namespace LojaInformatica1.TelaPrincipal
@@ -23,15 +24,7 @@ namespace LojaInformatica1.TelaPrincipal
 
         }
 
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
         
-        private void txtSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnAcessar_Click(object sender, EventArgs e)
         {
