@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="LojaInformaticaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="LojaInformaticaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="LojaInformaticaModelStoreContainer">
           <EntitySet Name="Cargo" EntityType="LojaInformaticaModel.Store.Cargo" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Cliente" EntityType="LojaInformaticaModel.Store.Cliente" store:Type="Tables" Schema="dbo" />
@@ -129,6 +129,7 @@
           <Property Name="DataEntrada" Type="date" Nullable="false" />
           <Property Name="IdOrdemServico" Type="int" Nullable="false" />
           <Property Name="IdTipoEquipamento" Type="int" Nullable="false" />
+          <Property Name="Observacao" Type="text" />
         </EntityType>
         <EntityType Name="Estado">
           <Key>
@@ -453,8 +454,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LojaInformaticaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -589,6 +589,7 @@
           <Property Name="IdTipoEquipamento" Type="Int32" Nullable="false" />
           <NavigationProperty Name="TipoEquipamento" Relationship="LojaInformaticaModel.FKEquipament237266" FromRole="Equipamento" ToRole="TipoEquipamento" />
           <NavigationProperty Name="OrdemServico" Relationship="LojaInformaticaModel.FKEquipament977259" FromRole="Equipamento" ToRole="OrdemServico" />
+          <Property Type="String" Name="Observacao" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Estado">
           <Key>
@@ -978,6 +979,7 @@
           <EntitySetMapping Name="Equipamentoes">
             <EntityTypeMapping TypeName="LojaInformaticaModel.Equipamento">
               <MappingFragment StoreEntitySet="Equipamento">
+                <ScalarProperty Name="Observacao" ColumnName="Observacao" />
                 <ScalarProperty Name="IdEquipamento" ColumnName="IdEquipamento" />
                 <ScalarProperty Name="Modelo" ColumnName="Modelo" />
                 <ScalarProperty Name="NumeroSerie" ColumnName="NumeroSerie" />

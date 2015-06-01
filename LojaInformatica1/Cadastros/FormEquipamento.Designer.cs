@@ -37,12 +37,12 @@
             this.lblDataEntradaEquipamento = new System.Windows.Forms.Label();
             this.lblObservaçãoEquipamento = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cbxTipoequipamento = new System.Windows.Forms.ComboBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.txtNumSerie = new System.Windows.Forms.TextBox();
+            this.txtFabricante = new System.Windows.Forms.TextBox();
+            this.txtObsEquipamento = new System.Windows.Forms.TextBox();
+            this.dtpDataEntradaEquipamento = new System.Windows.Forms.DateTimePicker();
+            this.cbxTipoEquipamento = new System.Windows.Forms.ComboBox();
             this.btnSalvarEquipamento = new System.Windows.Forms.Button();
             this.btnCancelarEquipamento = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -128,58 +128,58 @@
             this.textBox1.Size = new System.Drawing.Size(190, 20);
             this.textBox1.TabIndex = 15;
             // 
-            // textBox3
+            // txtModelo
             // 
-            this.textBox3.Location = new System.Drawing.Point(223, 187);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(190, 20);
-            this.textBox3.TabIndex = 15;
+            this.txtModelo.Location = new System.Drawing.Point(223, 187);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(190, 20);
+            this.txtModelo.TabIndex = 15;
             // 
-            // textBox4
+            // txtNumSerie
             // 
-            this.textBox4.Location = new System.Drawing.Point(223, 232);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(190, 20);
-            this.textBox4.TabIndex = 15;
+            this.txtNumSerie.Location = new System.Drawing.Point(223, 232);
+            this.txtNumSerie.Name = "txtNumSerie";
+            this.txtNumSerie.Size = new System.Drawing.Size(190, 20);
+            this.txtNumSerie.TabIndex = 15;
             // 
-            // textBox5
+            // txtFabricante
             // 
-            this.textBox5.Location = new System.Drawing.Point(223, 277);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(190, 20);
-            this.textBox5.TabIndex = 15;
+            this.txtFabricante.Location = new System.Drawing.Point(223, 277);
+            this.txtFabricante.Name = "txtFabricante";
+            this.txtFabricante.Size = new System.Drawing.Size(190, 20);
+            this.txtFabricante.TabIndex = 15;
             // 
-            // textBox7
+            // txtObsEquipamento
             // 
-            this.textBox7.Location = new System.Drawing.Point(110, 374);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(303, 167);
-            this.textBox7.TabIndex = 15;
+            this.txtObsEquipamento.Location = new System.Drawing.Point(110, 374);
+            this.txtObsEquipamento.Multiline = true;
+            this.txtObsEquipamento.Name = "txtObsEquipamento";
+            this.txtObsEquipamento.Size = new System.Drawing.Size(303, 167);
+            this.txtObsEquipamento.TabIndex = 15;
             // 
-            // dateTimePicker1
+            // dtpDataEntradaEquipamento
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(223, 322);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(190, 20);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dtpDataEntradaEquipamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataEntradaEquipamento.Location = new System.Drawing.Point(223, 322);
+            this.dtpDataEntradaEquipamento.Name = "dtpDataEntradaEquipamento";
+            this.dtpDataEntradaEquipamento.Size = new System.Drawing.Size(190, 20);
+            this.dtpDataEntradaEquipamento.TabIndex = 16;
             // 
-            // cbxTipoequipamento
+            // cbxTipoEquipamento
             // 
-            this.cbxTipoequipamento.FormattingEnabled = true;
-            this.cbxTipoequipamento.Items.AddRange(new object[] {
+            this.cbxTipoEquipamento.FormattingEnabled = true;
+            this.cbxTipoEquipamento.Items.AddRange(new object[] {
             "MicroComputador",
             "Monitor",
             "Notebook",
             "Netbook",
             "Impressora Jato de Tinta",
             "Impressora Laser"});
-            this.cbxTipoequipamento.Location = new System.Drawing.Point(223, 140);
-            this.cbxTipoequipamento.Name = "cbxTipoequipamento";
-            this.cbxTipoequipamento.Size = new System.Drawing.Size(190, 21);
-            this.cbxTipoequipamento.TabIndex = 17;
-            this.cbxTipoequipamento.Text = "Selecione um Equipamento...";
+            this.cbxTipoEquipamento.Location = new System.Drawing.Point(223, 140);
+            this.cbxTipoEquipamento.Name = "cbxTipoEquipamento";
+            this.cbxTipoEquipamento.Size = new System.Drawing.Size(190, 21);
+            this.cbxTipoEquipamento.TabIndex = 17;
+            this.cbxTipoEquipamento.Text = "Selecione um Equipamento...";
             // 
             // btnSalvarEquipamento
             // 
@@ -206,12 +206,12 @@
             this.ClientSize = new System.Drawing.Size(464, 622);
             this.Controls.Add(this.btnCancelarEquipamento);
             this.Controls.Add(this.btnSalvarEquipamento);
-            this.Controls.Add(this.cbxTipoequipamento);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.cbxTipoEquipamento);
+            this.Controls.Add(this.dtpDataEntradaEquipamento);
+            this.Controls.Add(this.txtObsEquipamento);
+            this.Controls.Add(this.txtFabricante);
+            this.Controls.Add(this.txtNumSerie);
+            this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblObservaçãoEquipamento);
             this.Controls.Add(this.lblDataEntradaEquipamento);
@@ -239,12 +239,12 @@
         private System.Windows.Forms.Label lblDataEntradaEquipamento;
         private System.Windows.Forms.Label lblObservaçãoEquipamento;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox cbxTipoequipamento;
+        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.TextBox txtNumSerie;
+        private System.Windows.Forms.TextBox txtFabricante;
+        private System.Windows.Forms.TextBox txtObsEquipamento;
+        private System.Windows.Forms.DateTimePicker dtpDataEntradaEquipamento;
+        private System.Windows.Forms.ComboBox cbxTipoEquipamento;
         private System.Windows.Forms.Button btnSalvarEquipamento;
         private System.Windows.Forms.Button btnCancelarEquipamento;
 

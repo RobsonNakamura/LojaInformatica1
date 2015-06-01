@@ -33,6 +33,7 @@
     <EntitySetMapping Name="Equipamentoes">
       <EntityTypeMapping TypeName="LojaInformaticaModel.Equipamento">
         <MappingFragment StoreEntitySet="Equipamento">
+          <ScalarProperty Name="Observacao" ColumnName="Observacao" />
           <ScalarProperty Name="IdEquipamento" ColumnName="IdEquipamento" />
           <ScalarProperty Name="Modelo" ColumnName="Modelo" />
           <ScalarProperty Name="NumeroSerie" ColumnName="NumeroSerie" />

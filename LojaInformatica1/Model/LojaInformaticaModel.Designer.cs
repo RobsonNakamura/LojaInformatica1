@@ -1255,6 +1255,30 @@ namespace LojaInformatica1.Model
         private global::System.Int32 _IdTipoEquipamento;
         partial void OnIdTipoEquipamentoChanging(global::System.Int32 value);
         partial void OnIdTipoEquipamentoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Observacao
+        {
+            get
+            {
+                return _Observacao;
+            }
+            set
+            {
+                OnObservacaoChanging(value);
+                ReportPropertyChanging("Observacao");
+                _Observacao = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Observacao");
+                OnObservacaoChanged();
+            }
+        }
+        private global::System.String _Observacao;
+        partial void OnObservacaoChanging(global::System.String value);
+        partial void OnObservacaoChanged();
 
         #endregion
 

@@ -20,18 +20,38 @@ namespace LojaInformatica1.Cadastros
         private PessoaFisicaData pessoaFisicaData;
         private PessoaJuridicaData pessoaJuridicaData;
         private EnderecoData enderecoData;
+        private EstadoData estadoData;
 
         private Pessoa pessoa;
         private PessoaFisica pessoaFisica;
         private PessoaJuridica pessoaJuridica;
         private Endereco endereco;
+        private Estado estado;
 
 
         public FormCadastroClientes()
         {
             InitializeComponent();
             grbPF.Visible = false;
-            grbPJ.Visible = false;  
+            grbPJ.Visible = false;
+
+            pessoa = new Pessoa();
+            pessoaFisica = new PessoaFisica();
+            pessoaJuridica = new PessoaJuridica();
+            endereco = new Endereco();
+            estado = new Estado();
+
+            db = new LojaInformaticaEntities();
+
+            this.pessoaData = new PessoaData(db);
+            this.pessoaFisicaData = new PessoaFisicaData(db);
+            this.pessoaJuridicaData = new PessoaJuridicaData(db);
+            this.enderecoData = new EnderecoData(db);
+            this.estadoData = new EstadoData(db);
+
+            cbxEstado.DataSource = estadoData.todosEstados();
+            cbxEstado.DisplayMember = "nome";
+            cbxEstado.ValueMember = "UF";
         }
 
         private void rdbPF_CheckedChanged(object sender, EventArgs e)
@@ -52,7 +72,7 @@ namespace LojaInformatica1.Cadastros
             }
         }
 
-        public void obterClientePF()
+        public void obterCliente()
         {
             pessoa.Nome = txtNome.Text;
             pessoa.Email = txtEmail.Text;
@@ -64,13 +84,23 @@ namespace LojaInformatica1.Cadastros
             endereco.Cidade = txtCidade.Text;
             endereco.CEP = txtCEP.Text;
             //endereco.Estado = cbxEstado.SelectValue; linha de comando para pegar o dado do estado da combo box
-      
+            endereco.UF = (string)cbxEstado.SelectedValue;
             pessoa.Observacao = txtObservacao.Text;
+        }
+
+        public void obterClientePF() {
             // Dados Exclusivos de Pessoa Física
             pessoaFisica.RG = txtRGPF.Text;
             pessoaFisica.CPF = txtCPFPF.Text.Replace(".", "").Replace("-", "");
             dtpDataNascimentoPF.Value = DateTime.Now;
-            
+        }
+
+        public void obterClientePJ()
+        {
+            // Dados Exclusivos de Pessoa Júridica
+            pessoaJuridica.CNPJ = txtCNPJPJ.Text;
+            pessoaJuridica.InscricaoEstadual = txtInscricaoEstadualPJ.Text;
+            pessoaJuridica.RazaoSocial = txtRazaoSocialPJ.Text;
         }
 
         public bool validar()

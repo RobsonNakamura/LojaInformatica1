@@ -31,8 +31,6 @@
             this.btnCancelarFuncionario = new System.Windows.Forms.Button();
             this.btnSalvarFuncionario = new System.Windows.Forms.Button();
             this.cbxEstadoFuncionario = new System.Windows.Forms.ComboBox();
-            this.btnFotoFuncionario = new System.Windows.Forms.Button();
-            this.ptbFotoFuncionario = new System.Windows.Forms.PictureBox();
             this.dtpDataDemissao = new System.Windows.Forms.DateTimePicker();
             this.dtpDataEmissao = new System.Windows.Forms.DateTimePicker();
             this.txtCodFuncionario = new System.Windows.Forms.TextBox();
@@ -69,7 +67,6 @@
             this.lblSenhaFuncionario = new System.Windows.Forms.Label();
             this.txtSenhaFuncionario = new System.Windows.Forms.TextBox();
             this.txtLoginFuncionario = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbFotoFuncionario)).BeginInit();
             this.grbValeRefeicao.SuspendLayout();
             this.grbValeTransporte.SuspendLayout();
             this.SuspendLayout();
@@ -128,23 +125,6 @@
             this.cbxEstadoFuncionario.Size = new System.Drawing.Size(171, 21);
             this.cbxEstadoFuncionario.TabIndex = 42;
             this.cbxEstadoFuncionario.Text = "Selecione um estado...";
-            // 
-            // btnFotoFuncionario
-            // 
-            this.btnFotoFuncionario.Location = new System.Drawing.Point(584, 247);
-            this.btnFotoFuncionario.Name = "btnFotoFuncionario";
-            this.btnFotoFuncionario.Size = new System.Drawing.Size(100, 23);
-            this.btnFotoFuncionario.TabIndex = 41;
-            this.btnFotoFuncionario.Text = "Foto";
-            this.btnFotoFuncionario.UseVisualStyleBackColor = true;
-            // 
-            // ptbFotoFuncionario
-            // 
-            this.ptbFotoFuncionario.Location = new System.Drawing.Point(584, 110);
-            this.ptbFotoFuncionario.Name = "ptbFotoFuncionario";
-            this.ptbFotoFuncionario.Size = new System.Drawing.Size(100, 118);
-            this.ptbFotoFuncionario.TabIndex = 40;
-            this.ptbFotoFuncionario.TabStop = false;
             // 
             // dtpDataDemissao
             // 
@@ -242,12 +222,13 @@
             // 
             this.grbValeRefeicao.Controls.Add(this.rdbSimRefeicao);
             this.grbValeRefeicao.Controls.Add(this.rdbNaoRefeicao);
-            this.grbValeRefeicao.Location = new System.Drawing.Point(34, 426);
+            this.grbValeRefeicao.Location = new System.Drawing.Point(50, 426);
             this.grbValeRefeicao.Name = "grbValeRefeicao";
             this.grbValeRefeicao.Size = new System.Drawing.Size(173, 71);
             this.grbValeRefeicao.TabIndex = 26;
             this.grbValeRefeicao.TabStop = false;
             this.grbValeRefeicao.Text = "Vale Refeição";
+            this.grbValeRefeicao.Enter += new System.EventHandler(this.grbValeRefeicao_Enter);
             // 
             // rdbSimRefeicao
             // 
@@ -281,6 +262,7 @@
             this.grbValeTransporte.TabIndex = 27;
             this.grbValeTransporte.TabStop = false;
             this.grbValeTransporte.Text = "Vale Transporte";
+            this.grbValeTransporte.Enter += new System.EventHandler(this.grbValeTransporte_Enter);
             // 
             // rdbSimTransporte
             // 
@@ -471,8 +453,6 @@
             this.Controls.Add(this.btnCancelarFuncionario);
             this.Controls.Add(this.btnSalvarFuncionario);
             this.Controls.Add(this.cbxEstadoFuncionario);
-            this.Controls.Add(this.btnFotoFuncionario);
-            this.Controls.Add(this.ptbFotoFuncionario);
             this.Controls.Add(this.dtpDataDemissao);
             this.Controls.Add(this.dtpDataEmissao);
             this.Controls.Add(this.txtLoginFuncionario);
@@ -507,7 +487,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FormFuncionario";
             this.Text = "Cadastro de Funcionários";
-            ((System.ComponentModel.ISupportInitialize)(this.ptbFotoFuncionario)).EndInit();
             this.grbValeRefeicao.ResumeLayout(false);
             this.grbValeRefeicao.PerformLayout();
             this.grbValeTransporte.ResumeLayout(false);
@@ -522,8 +501,6 @@
         private System.Windows.Forms.Button btnCancelarFuncionario;
         private System.Windows.Forms.Button btnSalvarFuncionario;
         private System.Windows.Forms.ComboBox cbxEstadoFuncionario;
-        private System.Windows.Forms.Button btnFotoFuncionario;
-        private System.Windows.Forms.PictureBox ptbFotoFuncionario;
         private System.Windows.Forms.DateTimePicker dtpDataDemissao;
         private System.Windows.Forms.DateTimePicker dtpDataEmissao;
         private System.Windows.Forms.TextBox txtCodFuncionario;

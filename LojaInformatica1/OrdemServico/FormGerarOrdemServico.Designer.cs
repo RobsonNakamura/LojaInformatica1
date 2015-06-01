@@ -66,6 +66,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.grbOSInterno = new System.Windows.Forms.GroupBox();
+            this.btnCodEquipamentoOS = new System.Windows.Forms.Button();
             this.txtNumSerieOS = new System.Windows.Forms.TextBox();
             this.txtModeloOS = new System.Windows.Forms.TextBox();
             this.txtTipoEquipamentoOS = new System.Windows.Forms.TextBox();
@@ -77,11 +78,10 @@
             this.dtpDataEntradaEquipamentoOS = new System.Windows.Forms.DateTimePicker();
             this.grbOSExterno = new System.Windows.Forms.GroupBox();
             this.dtpDataVisitaOS = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxTipoServicoOS = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnGerarOS = new System.Windows.Forms.Button();
             this.btnCancelarOS = new System.Windows.Forms.Button();
-            this.btnCodEquipamentoOS = new System.Windows.Forms.Button();
             this.grbTipoOrdemServico.SuspendLayout();
             this.grbServicoRealizado.SuspendLayout();
             this.grbOSInterno.SuspendLayout();
@@ -432,6 +432,15 @@
             this.grbOSInterno.TabStop = false;
             this.grbOSInterno.Text = "Ordem de Serviço Interno";
             // 
+            // btnCodEquipamentoOS
+            // 
+            this.btnCodEquipamentoOS.Location = new System.Drawing.Point(321, 71);
+            this.btnCodEquipamentoOS.Name = "btnCodEquipamentoOS";
+            this.btnCodEquipamentoOS.Size = new System.Drawing.Size(52, 19);
+            this.btnCodEquipamentoOS.TabIndex = 21;
+            this.btnCodEquipamentoOS.Text = "Buscar";
+            this.btnCodEquipamentoOS.UseVisualStyleBackColor = true;
+            // 
             // txtNumSerieOS
             // 
             this.txtNumSerieOS.Location = new System.Drawing.Point(142, 179);
@@ -509,7 +518,7 @@
             this.grbOSExterno.Controls.Add(this.lblDataVisitaOS);
             this.grbOSExterno.Controls.Add(this.lblTipoServicoOS);
             this.grbOSExterno.Controls.Add(this.dtpDataVisitaOS);
-            this.grbOSExterno.Controls.Add(this.comboBox1);
+            this.grbOSExterno.Controls.Add(this.cbxTipoServicoOS);
             this.grbOSExterno.Location = new System.Drawing.Point(568, 13);
             this.grbOSExterno.Name = "grbOSExterno";
             this.grbOSExterno.Size = new System.Drawing.Size(385, 141);
@@ -524,13 +533,21 @@
             this.dtpDataVisitaOS.Size = new System.Drawing.Size(265, 20);
             this.dtpDataVisitaOS.TabIndex = 2;
             // 
-            // comboBox1
+            // cbxTipoServicoOS
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(16, 97);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(357, 21);
-            this.comboBox1.TabIndex = 2;
+            this.cbxTipoServicoOS.FormattingEnabled = true;
+            this.cbxTipoServicoOS.Items.AddRange(new object[] {
+            "MicroComputador",
+            "Monitor",
+            "Notebook",
+            "Netbook",
+            "Impressora Jato de Tinta",
+            "Impressora Laser"});
+            this.cbxTipoServicoOS.Location = new System.Drawing.Point(16, 97);
+            this.cbxTipoServicoOS.Name = "cbxTipoServicoOS";
+            this.cbxTipoServicoOS.Size = new System.Drawing.Size(357, 21);
+            this.cbxTipoServicoOS.TabIndex = 2;
+            this.cbxTipoServicoOS.Text = "Selecione o Tipo do Serviço...";
             // 
             // button1
             // 
@@ -558,15 +575,6 @@
             this.btnCancelarOS.TabIndex = 8;
             this.btnCancelarOS.Text = "Cancelar";
             this.btnCancelarOS.UseVisualStyleBackColor = true;
-            // 
-            // btnCodEquipamentoOS
-            // 
-            this.btnCodEquipamentoOS.Location = new System.Drawing.Point(321, 71);
-            this.btnCodEquipamentoOS.Name = "btnCodEquipamentoOS";
-            this.btnCodEquipamentoOS.Size = new System.Drawing.Size(52, 19);
-            this.btnCodEquipamentoOS.TabIndex = 21;
-            this.btnCodEquipamentoOS.Text = "Buscar";
-            this.btnCodEquipamentoOS.UseVisualStyleBackColor = true;
             // 
             // FormGerarOrdemServico
             // 
@@ -673,7 +681,7 @@
         private System.Windows.Forms.Label lblTipoEquipamentoOS;
         private System.Windows.Forms.GroupBox grbOSExterno;
         private System.Windows.Forms.DateTimePicker dtpDataVisitaOS;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxTipoServicoOS;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnGerarOS;
         private System.Windows.Forms.Button btnCancelarOS;

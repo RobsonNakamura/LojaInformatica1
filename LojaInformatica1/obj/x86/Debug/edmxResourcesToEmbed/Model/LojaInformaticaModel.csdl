@@ -131,6 +131,7 @@
     <Property Name="IdTipoEquipamento" Type="Int32" Nullable="false" />
     <NavigationProperty Name="TipoEquipamento" Relationship="LojaInformaticaModel.FKEquipament237266" FromRole="Equipamento" ToRole="TipoEquipamento" />
     <NavigationProperty Name="OrdemServico" Relationship="LojaInformaticaModel.FKEquipament977259" FromRole="Equipamento" ToRole="OrdemServico" />
+    <Property Type="String" Name="Observacao" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Estado">
     <Key>

@@ -80,6 +80,11 @@ namespace LojaInformatica1.TelaInicial
             }
         }
 
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         
 
         

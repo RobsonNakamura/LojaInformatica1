@@ -124,6 +124,7 @@
     <Property Name="DataEntrada" Type="date" Nullable="false" />
     <Property Name="IdOrdemServico" Type="int" Nullable="false" />
     <Property Name="IdTipoEquipamento" Type="int" Nullable="false" />
+    <Property Name="Observacao" Type="text" />
   </EntityType>
   <EntityType Name="Estado">
     <Key>
